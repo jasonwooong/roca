@@ -1,0 +1,773 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Christopher R. Parr <fosstux@gmail.com>, 2012.
+# Daniel Seither <post@tiwoc.de>, 2012.
+# Yassine Elassad <yassine.elassad@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-26 01:48-0700\n"
+"PO-Revision-Date: 2012-10-18 11:58+0000\n"
+"Last-Translator: Sebastián Ramírez Magrí <sebasmagri@gmail.com>\n"
+"Language-Team: German (http://www.transifex.com/projects/p/mezzanine/"
+"language/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: defaults.py:7
+msgid "Default header photo"
+msgstr ""
+
+#: defaults.py:8
+msgid "Specify a default photo"
+msgstr ""
+
+#: templates/base.html:161
+msgid "Powered by"
+msgstr "Umgesetzt mit"
+
+#: templates/base.html:164
+msgid "and"
+msgstr "und"
+
+#: templates/base.html:167
+msgid "Theme by"
+msgstr "Design von"
+
+#: templates/base.html:170
+msgid "View Mobile Site"
+msgstr "Mobile Seite ansehen"
+
+#: templates/index.html:4 templates/index.html.py:5 templates/index.html:8
+#: templates/search_results.html:10 templates/admin/index.html:15
+#: templates/pages/menus/breadcrumb.html:4
+#: templates/pages/menus/breadcrumb.html:10
+#: templates/pages/menus/dropdown.html:10
+#: templates/pages/menus/footer_tree.html:11
+#: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:9
+#: templates/pages/menus/tree.html:10
+msgid "Home"
+msgstr "Startseite"
+
+#: templates/index.html:12
+msgid ""
+"\n"
+"<h2>Congratulations!</h2>\n"
+"<p>\n"
+"    Welcome to your new Mezzanine powered website.\n"
+"    Here are some quick links to get you started:\n"
+"</p>\n"
+"<ul>\n"
+"    <li><a href=\"/admin/\">Log in to the admin interface</a></li>\n"
+"    <li><a href=\"http://mezzanine.jupo.org/docs/content-architecture.html"
+"\">Creating custom page types</a></li>\n"
+"    <li><a href=\"http://mezzanine.jupo.org/docs/frequently-asked-questions."
+"html#templates\">Modifying HTML templates</a></li>\n"
+"    <li><a href=\"http://mezzanine.jupo.org/docs/frequently-asked-questions."
+"html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin"
+"\">Changing this homepage</a></li>\n"
+"    <li><a href=\"http://mezzanine.jupo.org/docs/frequently-asked-questions."
+"html\">Other frequently asked questions</a></li>\n"
+"    <li><a href=\"http://mezzanine.jupo.org/docs/configuration.html#default-"
+"settings\">Full list of settings</a></li>\n"
+"    <li><a href=\"http://mezzanine.jupo.org/docs/deployment.html\">Deploying "
+"to a production server</a></li>\n"
+"</ul>\n"
+msgstr ""
+
+#: templates/search_results.html:5 templates/search_results.html.py:6
+#: templates/search_results.html:13
+msgid "Search Results"
+msgstr "Suchergebnisse"
+
+#: templates/search_results.html:20
+#, fuzzy, python-format
+msgid ""
+"\n"
+"No results were found in %(search_type)s matching your query: %(query)s\n"
+msgstr "Für diese Suchkriterien wurden keine Einträge gefunden:"
+
+#: templates/search_results.html:24
+#, python-format
+msgid ""
+"\n"
+"Showing %(start)s to %(end)s of %(total)s results in %(search_type)s "
+"matching your query: %(query)s\n"
+msgstr ""
+
+#: templates/admin/base_site.html:34
+msgid "View site"
+msgstr ""
+
+#: templates/admin/index.html:17 templates/admin/includes/dropdown_menu.html:4
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/admin/login.html:21
+msgid "You don't have permission to access the admin for this site."
+msgstr ""
+
+#: templates/admin/login.html:28
+msgid "Username or email:"
+msgstr "Benutzername oder E-Mail"
+
+#: templates/admin/login.html:32
+msgid "Password:"
+msgstr "Passwort"
+
+#: templates/admin/login.html:37
+msgid "Interface:"
+msgstr "Schnittstelle:"
+
+#: templates/admin/login.html:40 templates/includes/editable_toolbar.html:7
+#: templates/includes/editable_toolbar.html:9
+msgid "Admin"
+msgstr "Admin"
+
+#: templates/admin/login.html:43
+msgid "Site"
+msgstr "Seite"
+
+#: templates/admin/login.html:47
+msgid "Log in"
+msgstr "Anmelden"
+
+#: templates/admin/login.html:50
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
+#: templates/admin/includes/app_list.html:20
+#: templates/pages/menus/admin.html:31
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: templates/admin/includes/app_list.html:27
+msgid "Change"
+msgstr "Verändern"
+
+#: templates/admin/includes/dynamic_inline_stacked.html:6
+#: templates/admin/includes/dynamic_inline_tabular.html:6
+msgid "Add another"
+msgstr "Weiter hinzufügen"
+
+#: templates/admin/includes/recent_actions.html:4
+msgid "Recent Actions"
+msgstr "Neueste Aktionen"
+
+#: templates/admin/includes/recent_actions.html:5
+msgid "My Actions"
+msgstr "Meine Aktionen"
+
+#: templates/admin/includes/recent_actions.html:9
+msgid "None available"
+msgstr "Keine verfügbar"
+
+#: templates/blog/blog_post_detail.html:28
+#: templates/blog/blog_post_list.html:96
+#, fuzzy
+msgid "Posted by"
+msgstr "Umgesetzt mit"
+
+#: templates/blog/blog_post_detail.html:33
+#: templates/blog/blog_post_list.html:107
+#, python-format
+msgid "%(sometime)s ago"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:35
+#: templates/blog/blog_post_list.html:109
+#, python-format
+msgid " in %(location)s "
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:46
+#: templates/blog/blog_post_list.html:169
+#: templates/generic/includes/comments.html:3
+msgid "Comments"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:49
+#: templates/blog/blog_post_list.html:173
+#, python-format
+msgid "1 comment"
+msgid_plural "%(comments_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/blog/blog_post_detail.html:103
+#: templates/blog/blog_post_list.html:156
+#: templates/blog/includes/filter_panel.html:48
+msgid "Tags"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:146
+msgid "Related posts"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:4
+msgid "Blog"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:36
+msgid "Tag:"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:38
+msgid "Category:"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:42
+#, fuzzy
+msgid "Author:"
+msgstr "Autor"
+
+#: templates/blog/blog_post_list.html:55
+msgid "Viewing posts tagged"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:57
+msgid "Viewing posts for the category"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:59
+msgid "Viewing posts from"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:62
+msgid "Viewing posts by"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:102
+msgid "in"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:164
+msgid "read more"
+msgstr "Weiterlesen"
+
+#: templates/blog/includes/filter_panel.html:6
+#, fuzzy
+msgid "Recent Posts"
+msgstr "Neueste Aktionen"
+
+#: templates/blog/includes/filter_panel.html:19
+msgid "Archive"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:35
+msgid "Categories"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:64
+#, fuzzy
+msgid "Authors"
+msgstr "Autor"
+
+#: templates/blog/includes/filter_panel.html:76
+msgid "Feeds"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:78
+#: templates/blog/includes/filter_panel.html:82
+#: templates/blog/includes/filter_panel.html:86
+#: templates/blog/includes/filter_panel.html:90
+msgid "RSS"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:79
+#: templates/blog/includes/filter_panel.html:83
+#: templates/blog/includes/filter_panel.html:87
+#: templates/blog/includes/filter_panel.html:91
+msgid "Atom"
+msgstr ""
+
+#: templates/email/comment_notification.html:6
+msgid "A new comment has been posted on"
+msgstr ""
+
+#: templates/email/comment_notification.html:10
+#, python-format
+msgid ""
+"\n"
+"    At %(submit_date)s %(user_name)s wrote:\n"
+"    "
+msgstr ""
+
+#: templates/email/comment_notification.txt:7
+#, python-format
+msgid ""
+"\n"
+"At %(submit_date)s %(user_name)s wrote:\n"
+msgstr ""
+
+#: templates/errors/404.html:6
+msgid "Page not found"
+msgstr "Seite konnte nicht gefunden werden"
+
+#: templates/errors/404.html:10
+msgid "The page you requested does not exist."
+msgstr "Die aufgerufene Seite existiert nicht."
+
+#: templates/errors/500.html:6
+msgid "Error"
+msgstr "Fehler"
+
+#: templates/errors/500.html:10
+msgid "Sorry, an error occurred."
+msgstr "Entschuldigen Sie, ein Fehler trat auf."
+
+#: templates/generic/includes/comment.html:22
+#: templates/generic/includes/comment.html:53
+#: templates/generic/includes/comment.html:63 templates/twitter/tweets.html:20
+msgid "ago"
+msgstr ""
+
+#: templates/generic/includes/comment.html:25
+msgid "Link"
+msgstr ""
+
+#: templates/generic/includes/comment.html:26
+#: templates/generic/includes/comment.html:36
+msgid "Reply"
+msgstr ""
+
+#: templates/generic/includes/comment.html:59
+msgid "Comment deleted"
+msgstr ""
+
+#: templates/generic/includes/comment.html:61
+msgid "Comment awaiting approval"
+msgstr ""
+
+#: templates/generic/includes/comment.html:75
+msgid "There are currently no comments"
+msgstr ""
+
+#: templates/generic/includes/comments.html:16
+msgid "New Comment"
+msgstr ""
+
+#: templates/generic/includes/comments.html:24
+msgid "Send"
+msgstr ""
+
+#: templates/generic/includes/rating.html:7
+msgid "Current rating"
+msgstr ""
+
+#: templates/generic/includes/rating.html:9
+msgid "Currently unrated"
+msgstr ""
+
+#: templates/generic/includes/rating.html:19
+msgid "Rate"
+msgstr ""
+
+#: templates/includes/editable_form.html:16
+msgid "Save"
+msgstr "Speichern"
+
+#: templates/includes/editable_form.html:17
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: templates/includes/editable_form.html:25
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: templates/includes/editable_toolbar.html:11
+msgid "Log out"
+msgstr "Abmelden"
+
+#: templates/includes/pagination.html:8
+msgid "Page"
+msgstr "Seite"
+
+#: templates/includes/pagination.html:8
+msgid "of"
+msgstr "von"
+
+#: templates/includes/search_form.html:4
+msgid "Search"
+msgstr "Suchen"
+
+#: templates/twitter/tweets.html:7
+#, fuzzy
+msgid "Recent Tweets"
+msgstr "Neueste Aktionen"
+
+#~ msgid "This field is required if status is set to published."
+#~ msgstr ""
+#~ "Dieses Feld wird benötigt, wenn der Status auf Veröffentlicht gesetzt "
+#~ "wird."
+
+#~ msgid "Meta data"
+#~ msgstr "Metadaten"
+
+#~ msgid "Controls the ordering and grouping of the admin menu."
+#~ msgstr "Steuert die Sortierung und Gruppierung des Verwaltungsmenü."
+
+#~ msgid "Content"
+#~ msgstr "Inhalt"
+
+#~ msgid "Media Library"
+#~ msgstr "Medienbibliothek"
+
+#~ msgid "Users"
+#~ msgstr "Benutzer"
+
+#~ msgid "Unregister these models from the admin."
+#~ msgstr "Models vom Verwaltungsbereich entfernen"
+
+#~ msgid "Size of thumbnail previews for image fields in the admin interface."
+#~ msgstr "Größe der Voransichten für Bild-Felder im Verwaltungsbereich"
+
+#~ msgid "Akismet API Key"
+#~ msgstr "Akismet API Schlüssel"
+
+#~ msgid ""
+#~ "Key for http://akismet.com spam filtering service. Used for filtering "
+#~ "comments and forms."
+#~ msgstr ""
+#~ "Schlüssel für den Spam-Filterungs-Dienst http://akismet.com. Dient dem "
+#~ "Filtern von Kommentaren und Formularen."
+
+#~ msgid ""
+#~ "A three item sequence, each containing a sequence of template tags used "
+#~ "to render the admin dashboard."
+#~ msgstr ""
+#~ "Eine Sequenz aus drei Elementen, wobei jedes der Elemente eine Sequenz "
+#~ "von Template Tags enthält, die für die Ausgabe des Verwaltungsbereichs "
+#~ "verwendet werden."
+
+#~ msgid "Device specific template sub-directory to use as the default device."
+#~ msgstr ""
+#~ "Das zu verwendende Standard-Unterverzeichnis für geräteabhängige "
+#~ "Templates für das Standard-Gerät"
+
+#~ msgid ""
+#~ "Mapping of device specific template sub-directory names to the sequence "
+#~ "of strings that may be found in their user agents."
+#~ msgstr ""
+#~ "Zuordnung von gerätespezifischen Template-Unterverzeichnissen mit der "
+#~ "Sequenz von Zeichenketten, bie beim User Agent gefunden werden kann."
+
+#~ msgid "If ``True``, website forms will use HTML5 features."
+#~ msgstr "Bei den Formularen werden HTML5 Features verwenden, wenn ``Wahr``"
+
+#~ msgid ""
+#~ "A sequence of fields that will be injected into Mezzanine's (or any "
+#~ "library's) models. Each item in the sequence is a four item sequence. The "
+#~ "first two items are the dotted path to the model and its field name to be "
+#~ "added, and the dotted path to the field class to use for the field. The "
+#~ "third and fourth items are a sequence of positional args and a dictionary "
+#~ "of keyword args, to use when creating the field instance. When specifying "
+#~ "the field class, the path ``django.models.db.`` can be omitted for "
+#~ "regular Django model fields."
+#~ msgstr ""
+#~ "Eine Abfolge von Feldern, die als Modelle in Mezzanine (oder jede "
+#~ "Bibliothek) injiziert werden. Jedes Element in der Sequenz ist eine "
+#~ "Sequenz aus vier Elementen. Die ersten beiden Elemente sind der "
+#~ "gepunkteten Pfad zu dem Modell und dessen Feldnamen, das hinzugefügt "
+#~ "werden soll, und der gepunktete Pfad zu der Feld-Klasse, die für das Feld "
+#~ "verwendet werden soll. Das dritte und vierte Element sind eine Folge von "
+#~ "positionellen Argumenten und einem Wörterbuch der Keyword-Argumente, die "
+#~ "beim Anlegen der Feld-Instanz verwendet werden soll. Bei der Angabe der "
+#~ "Feld-Klasse kann der Pfad ``django.models.db.`` für regelmäßige Django "
+#~ "Modell.Felder ausgelassen werden."
+
+#~ msgid "Google Analytics ID"
+#~ msgstr "Google Analytics ID"
+
+#~ msgid "Google Analytics ID (http://www.google.com/analytics/)"
+#~ msgstr "Google Analytics ID (http://www.google.com/analytics/)"
+
+#~ msgid ""
+#~ "A sequence mapping host names to themes, allowing different templates to "
+#~ "be served per HTTP hosts Each item in the sequence is a two item "
+#~ "sequence, containing a host such as ``othersite.example.com``, and the "
+#~ "name of an importable Python package for the theme. If the host is "
+#~ "matched for a request, the templates directory inside the theme package "
+#~ "will be first searched when loading templates."
+#~ msgstr ""
+#~ "Eine Sequenz, die die Rechnernamen mit Themen verknüpft, sodass "
+#~ "unterschiedliche Vorlagen, die pro HTTP hosts bereitgestellt werden, zu "
+#~ "bedienen. Jedes Element in der Sequenz ist eine Sequenz mit zwei "
+#~ "Elementen, die einen Host wie ``othersite.example.com``, und der Namen "
+#~ "eines in Python importierbaren Pakets für das Layout. Wenn der Host bei "
+#~ "einer Abfrage zugeordnet werden kann, wird die Template-Verzeichnis in "
+#~ "das Layout-Paket zuerst durchsucht werden beim Laden von Templates."
+
+#~ msgid "Name of the jQuery file."
+#~ msgstr "Name der jQuery-Datei"
+
+#~ msgid "Name of the jQuery file found in mezzanine/core/static/mezzanine/js/"
+#~ msgstr ""
+#~ "Name der jQuery-Datei im Verzeichnis mezzanine/core/static/mezzanine/js/"
+
+#~ msgid "Max paging links"
+#~ msgstr "Maximale Anzahl der Links"
+
+#~ msgid "Max number of paging links to display when paginating."
+#~ msgstr "Maximale Anzahl der Links pro Seite"
+
+#~ msgid ""
+#~ "Dotted package path and class name of the widget to use for the "
+#~ "``RichTextField``."
+#~ msgstr ""
+#~ "Gepunkteter Paketpfad und Klassenname des Widgets, welches im  "
+#~ "``RichTextField`` verwendet werden soll."
+
+#~ msgid ""
+#~ "List of HTML tags that won't be stripped from ``RichTextField`` instances."
+#~ msgstr ""
+#~ "Liste von HTML-Tags, die nicht aus ``RichTextField``-Instanzen entfernt "
+#~ "werden."
+
+#~ msgid ""
+#~ "List of HTML attributes that won't be stripped from ``RichTextField`` "
+#~ "instances."
+#~ msgstr ""
+#~ "Liste von HTML-Attributen, die nicht aus ``RichTextField``-Instanzen "
+#~ "entfernt werden."
+
+#~ msgid ""
+#~ "Dotted path to the function to call on a ``RichTextField`` value before "
+#~ "it is rendered to the template."
+#~ msgstr ""
+#~ "Gepunkteter Pfad zu einer Funktion, die auf dem Inhalt eines "
+#~ "``RichTextField`` aufgerufen werden soll, bevor es im Template gerendert "
+#~ "wird."
+
+#~ msgid "High"
+#~ msgstr "Hoch"
+
+#~ msgid "Low (allows video, iframe, Flash, etc)"
+#~ msgstr "Niedrig (erlaubt Videos, IFrames, Flash usw.)"
+
+#~ msgid "No filtering"
+#~ msgstr "Keine Filterung"
+
+#~ msgid "Rich Text filter level"
+#~ msgstr "Filterstufe für formatierten Text"
+
+#~ msgid ""
+#~ "*Do not change this setting unless you know what you're doing.*\n"
+#~ "\n"
+#~ "When content is saved in a Rich Text (WYSIWYG) field, unsafe HTML tags "
+#~ "and attributes are stripped from the content to protect against staff "
+#~ "members intentionally adding code that could be used to cause problems, "
+#~ "such as changing their account to a super-user with full access to the "
+#~ "system.\n"
+#~ "\n"
+#~ "This setting allows you to change the level of filtering that occurs. "
+#~ "Setting it to low will allow certain extra tags to be permitted, such as "
+#~ "those required for embedding video. While these tags are not the main "
+#~ "candidates for users adding malicious code, they are still considered "
+#~ "dangerous and could potentially be mis-used by a particularly technical "
+#~ "user, and so are filtered out when the filtering level is set to high.\n"
+#~ "\n"
+#~ "Setting the filtering level to no filtering, will disable all filtering, "
+#~ "and allow any code to be entered by staff members, including script tags."
+#~ msgstr ""
+#~ "*Nicht ändern, wenn Sie nicht genau wissen, was Sie tun.*\n"
+#~ "\n"
+#~ "Wenn der Inhalt eines Feldes für formatierten Text (WYSIWYG) gespeichert "
+#~ "wird, werden potentiell unsichere HTML-Tags und -Attribute aus dem Inhalt "
+#~ "entfernt, um vor Team-Mitgliedern zu schützen, die absichtlich "
+#~ "problematischen Code einfügen. Ein Beispiel dafür ist die Ausstattung des "
+#~ "Teammitglied-Kontos mit Administratorrechten.\n"
+#~ "\n"
+#~ "Diese Einstellung ermöglicht Ihnen festzulegen, wie streng der Filter "
+#~ "agieren soll. Wenn er auf niedrig eingestellt wird, werden zusätzliche "
+#~ "Tags erlaubt, die z.B. für die Einbettung von Video nötig sind. Obwohl "
+#~ "diese Tags ein geringeres Schadenspotential als andere mit sich bringen, "
+#~ "können Sie von einem technisch versierten Nutzer dennoch ausgenutzt "
+#~ "werden und werden deshalb bei der Einstellung hoch ausgefiltert.\n"
+#~ "\n"
+#~ "Wenn der Filter deaktiviert wird, können Teammitglieder jeglichen HTML-"
+#~ "Code, einschließlich script-Tags, eingeben."
+
+#~ msgid "Search results per page"
+#~ msgstr "Suchergebnisse pro Seite"
+
+#~ msgid "Number of results shown in the search results page."
+#~ msgstr "Anzahl der Ergebnisse, die auf der Ergebnisseite angezeigt werden."
+
+#~ msgid "Site Title"
+#~ msgstr "Titel der Seite"
+
+#~ msgid ""
+#~ "Title that will display at the top of the site, and be appended to the "
+#~ "content of the HTML title tags on every page."
+#~ msgstr ""
+#~ "Titel, der oben in der Seite angezeigt wird und der beim Titel des "
+#~ "Inhalts jeder Seite angehängt wird."
+
+#~ msgid "Tagline"
+#~ msgstr "Slogan"
+
+#~ msgid "A tag line that will appear at the top of all pages."
+#~ msgstr "Ein Slogan, der im Kopf aller Seiten zu sehen ist"
+
+#~ msgid "An open source content management platform."
+#~ msgstr "Eine freie Plattform für Content Management"
+
+#~ msgid ""
+#~ "Dotted Python path to the callable for converting strings into URL slugs. "
+#~ "Defaults to ``mezzanine.utils.urls.slugify_unicode`` which allows for non-"
+#~ "ascii URLS. Change to ``django.template.defaultfilters.slugify`` to use "
+#~ "Django's slugify function, or something of your own if required."
+#~ msgstr ""
+#~ "Gepunkteter Python Pfad zum Aufruf für die Umwandlung von Zeichenketten "
+#~ "in URL Pfade. Der Standardwert ist `` `` ``mezzanine.utils.urls."
+#~ "slugify_unicode``, das Nicht-ASCII-URLs ermöglicht. Ändern Sie das in "
+#~ "``django.template.defaultfilters.slugify``, um Django's slugify Funktion, "
+#~ "oder etwas Eigenes zu verwenden, wenn erforderlich."
+
+#~ msgid "Enable SSL"
+#~ msgstr "SSL aktivieren"
+
+#~ msgid "Force Host"
+#~ msgstr "Servernamen erzwingen"
+
+#~ msgid ""
+#~ "Host name that the site should always be accessed via that matches the "
+#~ "SSL certificate."
+#~ msgstr ""
+#~ "Hostname, der mit dem im SSL-Zertifikat eingetragenen übereinstimmt und "
+#~ "über den die Seite immer angesprochen werden soll."
+
+#~ msgid "List of words which will be stripped from search queries."
+#~ msgstr "List von Wörtern, die aus Such-Abfragen entfernt werden."
+
+#~ msgid "Tag Cloud Sizes"
+#~ msgstr "Schlagwortwolken-Größenstufen"
+
+#~ msgid "Number of different sizes for tags when shown as a cloud."
+#~ msgstr ""
+#~ "Anzahl der verschiedenen Größen für Schlagwörter, bei der Anzeige als "
+#~ "Wolke"
+
+#~ msgid "Sequence of setting names available within templates."
+#~ msgstr ""
+#~ "Sequenz von Einstellungsnamen, die innerhalb des Templates zur Verfügung "
+#~ "stehen."
+
+#~ msgid ""
+#~ "Directory name to store thumbnails in, that will be created relative to "
+#~ "the original image's directory."
+#~ msgstr ""
+#~ "Verzeichnisname, in dem Vorschaubilder gespeichert werden, der relativ "
+#~ "zum Originalbilder-Pfad erzeugt wird."
+
+#~ msgid ""
+#~ "URL for the JavaScript file (relative to ``STATIC_URL``) that handles "
+#~ "configuring TinyMCE when the default ``RICHTEXT_WIDGET_CLASS`` is used."
+#~ msgstr ""
+#~ "URL für die Javascript-Datei(relativ zu ``STARIC_URL``), die die "
+#~ "Konfiguration von TinyMCE übernimmt, wenn die ``RICHTEXT_WIDGET_CLASS`` "
+#~ "verwendet wird."
+
+#~ msgid ""
+#~ "If ``True``, the south application will be automatically added to the "
+#~ "``INSTALLED_APPS`` setting."
+#~ msgstr ""
+#~ "Die South Anwendung wird automatisch zur Liste der ``INSTALLED_APPS`` "
+#~ "hinzugefügt, wenn  ``Wahr``."
+
+#~ msgid "Could not import the value of settings.RICHTEXT_WIDGET_CLASS: %s"
+#~ msgstr ""
+#~ "Konnte das in settings.RICHTEXT_WIDGET_CLASS definierte Model nicht "
+#~ "laden: %s"
+
+#~ msgid "Order"
+#~ msgstr "Sortierung"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "Leave blank to have the URL auto-generated from the title."
+#~ msgstr ""
+#~ "Leer lassen, um die URL automatisch aus dem Titel erstellen zu lassen."
+
+#~ msgid "View on site"
+#~ msgstr "Auf der Seite ansehen"
+
+#~ msgid ""
+#~ "Optional title to be used in the HTML title tag. If left blank, the main "
+#~ "title field will be used."
+#~ msgstr ""
+#~ "Titel, wie er im title-Tag von HTML erscheinen soll. Wenn dieses Feld "
+#~ "leer gelassen wird, wird der Inhalt des normalen Titel-Feldes verwendet."
+
+#~ msgid "Description"
+#~ msgstr "Beschreibung"
+
+#~ msgid "Generate description"
+#~ msgstr "Beschreibung erzeugen"
+
+#~ msgid ""
+#~ "If checked, the description will be automatically generated from content. "
+#~ "Uncheck if you want to manually set a custom description."
+#~ msgstr ""
+#~ "Wenn aktiviert, wird die Beschreibung automatisch vom Inhalt generiert. "
+#~ "Deaktivieren, wenn Sie eine eigene Beschreibung einstellen möchten."
+
+#~ msgid "Keywords"
+#~ msgstr "Schlüsselwörter"
+
+#~ msgid "Draft"
+#~ msgstr "Entwurf"
+
+#~ msgid "Published"
+#~ msgstr "Veröffentlicht"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "With Draft chosen, will only be shown for admin users on the site."
+#~ msgstr ""
+#~ "Wenn Entwurf ausgewählt wird, wird dieses Element nur Administratoren "
+#~ "angezeigt werde."
+
+#~ msgid "Published from"
+#~ msgstr "Veröffentlicht von"
+
+#~ msgid "With Published chosen, won't be shown until this time"
+#~ msgstr ""
+#~ "Wenn Veröffentlicht aktiv ist, wird der Inhalt bis zu diesem Zeitpunkt "
+#~ "nicht sichtbar sein"
+
+#~ msgid "Expires on"
+#~ msgstr "Endet am"
+
+#~ msgid "With Published chosen, won't be shown after this time"
+#~ msgstr ""
+#~ "Wenn Veröffentlicht aktiv ist, wird der Inhalt nach diesem Zeitpunkt "
+#~ "nicht sichtbar sein"
+
+#~ msgid "Permission denied"
+#~ msgstr "Zugang verweigert"
+
+#~ msgid "This is the homepage."
+#~ msgstr "Das ist die Startseite."
+
+#~ msgid "Showing"
+#~ msgstr "Anzeige von"
+
+#~ msgid "to"
+#~ msgstr "bis"
+
+#~ msgid "results matching your query:"
+#~ msgstr "Zu Ihrer Suche passende Ergebnisse:"
