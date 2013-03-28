@@ -152,7 +152,7 @@ img {
 	Fix form wrapping issue of drop down menu
 */
 @media only screen 
-and (max-width : 467px) {
+and (max-width : 600px) {
 	.navbar-inner .navbar-search {
 		input.search-query {
 			margin-bottom: 10px !important;
@@ -162,6 +162,11 @@ and (max-width : 467px) {
 	.navbar-inner {
 		padding-left: 10px;
 		padding-right: 10px;
+
+		p.tagline {
+			clear: both;
+			padding: 0px 10px 10px 10px;
+		}
 	}
 }
 
