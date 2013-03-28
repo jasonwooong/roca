@@ -134,6 +134,45 @@ img {
     border: 1px solid #dfdfdf; }
   .container .blog-list-detail {
     border-bottom: 5px solid #f2f2f2; }
+  .container .row .middle #comments {
+    font-size: .9em;
+    padding: 25px;
+    background-color: #F8F8F8;
+    border-radius: 25px; }
+    .container .row .middle #comments .comment {
+      border: 1px solid #e6e6e6;
+      background: none;
+      border-radius: 10px;
+      padding: 0px;
+      background-color: #FDFDFD; }
+      .container .row .middle #comments .comment .author {
+        padding: 10px 10px 10px 20px;
+        border-radius: 10px 10px 0px 0px;
+        background-color: #FAFAFA;
+        border-bottom: 1px solid #f0f0f0; }
+        .container .row .middle #comments .comment .author strong {
+          color: #2C9721; }
+      .container .row .middle #comments .comment p.content {
+        padding: 0 25px 0 25px;
+        margin: 20px 0 20px;
+        color: #9A9A9A; }
+      .container .row .middle #comments .comment .action {
+        text-align: right;
+        padding: 0 25px 10px 25px;
+        color: #9A9A9A; }
+        .container .row .middle #comments .comment .action a {
+          font-weight: bold;
+          font-size: 1.3em; }
+      .container .row .middle #comments .comment .rating {
+        text-align: right;
+        margin: 12px !important; }
+    .container .row .middle #comments textarea {
+      width: 97% !important; }
+    .container .row .middle #comments p.status {
+      color: #A1A1A1;
+      font-style: italic;
+      padding: 10px 15px 0px 15px;
+      margin: 0px; }
 
 .result-object {
   background: #F8F8F8;
