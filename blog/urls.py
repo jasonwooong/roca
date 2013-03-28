@@ -37,7 +37,3 @@ urlpatterns = patterns("roca.blog.views",
         name="blog_post_detail"),
     url("^%s$" % _slashes[1], "blog_post_list", name="blog_post_list"),
 )
-
-# urlpatterns = patterns("roca.blog.views",
-#     url(r"/test", "blog_post_list")
-# )

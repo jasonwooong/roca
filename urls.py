@@ -114,3 +114,7 @@ if "mezzanine.pages" in settings.INSTALLED_APPS:
         urlpatterns += patterns("",
             ("^", include("mezzanine.pages.urls")),
         )
+
+urlpatterns += patterns("",
+	("^", include("mezzanine.core.urls")),
+)
