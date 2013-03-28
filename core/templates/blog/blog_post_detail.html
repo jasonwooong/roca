@@ -113,6 +113,8 @@
 
 {% comment %}
 
+{# Uncomment to enable Share buttons on blog #}
+
 {% block blog_post_detail_sharebuttons %}
 {% set_short_url_for blog_post %}
 <a class="btn small primary share-twitter" target="_blank" href="http://twitter.com/home?status={{ blog_post.short_url|urlencode }}%20{{ blog_post.title|urlencode }}">{% trans "Share on Twitter" %}</a>
@@ -153,9 +155,9 @@
 {% endif %}
 {% endblock %}
 
-{% comment %}
+
 {% block blog_post_detail_comments %}
 {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
 {% endblock %}
-{% endcomment %}
+
 {% endblock %}
