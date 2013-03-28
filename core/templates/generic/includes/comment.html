@@ -15,11 +15,11 @@
         <strong>
             {% if comment.url %}
             <a href="{{ comment.url }}">
-                <img src="{% gravatar_url comment.email %}">
+                {# <img src="{% gravatar_url comment.email %}"> #}
                 {{ comment.user_name }}
             </a>
             {% else %}
-            <img src="{% gravatar_url comment.email %}">
+            {# <img src="{% gravatar_url comment.email %}"> #}
             {{ comment.user_name }}
             {% endif %}
         </strong>
@@ -27,7 +27,6 @@
         </div>
 
         <p class="content">{{ comment.comment|comment_filter }}</p>
-
         <div class="action">
             <a href="{{ request.path }}#comment-{{ comment.id }}">{% trans "Link" %}</a> /
             <a href="#reply-{{ comment.id }}" class="reply">{% trans "Reply" %}</a>
@@ -50,11 +49,11 @@
         <strong>
             {% if comment.url %}
             <a href="{{ comment.url }}">
-                <img src="{% gravatar_url comment.email %}">
+                {# <img src="{% gravatar_url comment.email %}"> #}
                 {{ comment.user_name }}
             </a>
             {% else %}
-            <img src="{% gravatar_url comment.email %}">
+            {# <img src="{% gravatar_url comment.email %}"> #}
             {{ comment.user_name }}
             {% endif %}
         </strong>
@@ -62,7 +61,7 @@
         <p>{{ comment.comment|comment_filter }}</p>
         {% endif %}
 
-        <p>
+        <p class="status">
             {% if comment.is_removed %}
             {% trans "Comment deleted" %}
             {% else %}
@@ -74,7 +73,7 @@
         {% endif %}
         {% endeditable %}
         {% if settings.COMMENTS_USE_RATINGS %}
-        {% rating_for comment %}
+        <div class="rating">{% rating_for comment %}</div>
         {% endif %}
         {% comment_thread comment %}
     </li>
