@@ -11,7 +11,7 @@
         {% endif %}>
         {% editable comment.is_public comment.is_removed %}
         {% if not comment.is_removed and comment.is_public %}
-
+        <div class="author">
         <strong>
             {% if comment.url %}
             <a href="{{ comment.url }}">
@@ -24,6 +24,8 @@
             {% endif %}
         </strong>
         <span class="timespan">{{ comment.submit_date|timesince }} {% trans "ago" %}</span>
+        </div>
+
         <p>{{ comment.comment|comment_filter }}</p>
 
         <a href="{{ request.path }}#comment-{{ comment.id }}">{% trans "Link" %}</a> /
