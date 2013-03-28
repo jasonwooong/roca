@@ -26,7 +26,7 @@
         <span class="timespan">{{ comment.submit_date|timesince }} {% trans "ago" %}</span>
         </div>
 
-        <p>{{ comment.comment|comment_filter }}</p>
+        <p class="content">{{ comment.comment|comment_filter }}</p>
 
         <a href="{{ request.path }}#comment-{{ comment.id }}">{% trans "Link" %}</a> /
         <a href="#reply-{{ comment.id }}" class="reply">{% trans "Reply" %}</a>
