@@ -136,9 +136,14 @@ img {
     border-bottom: 5px solid #f2f2f2; }
   .container .row .middle #comments {
     font-size: .9em;
-    padding: 25px;
+    padding: 15px 15px 25px 15px;
     background-color: #F8F8F8;
     border-radius: 25px; }
+    .container .row .middle #comments h3 {
+      padding-left: 10px;
+      margin: 0px 0px 15px; }
+    .container .row .middle #comments form.new-comment {
+      margin: 10px; }
     .container .row .middle #comments .comment {
       border: 1px solid #e6e6e6;
       background: none;
@@ -153,7 +158,7 @@ img {
         .container .row .middle #comments .comment .author strong {
           color: #2C9721; }
       .container .row .middle #comments .comment p.content {
-        padding: 0 25px 0 25px;
+        padding: 0 15px 0 15px;
         margin: 20px 0 20px;
         color: #9A9A9A; }
       .container .row .middle #comments .comment .action {
