@@ -312,7 +312,7 @@ and (max-width : 600px) {
 	font-size: .8em;
 
 	h3 {
-		font-size: 1.3em;
+		font-size: 1.5em;
 		font-weight: normal;
 		color: #999;
 		margin: 0px;
@@ -335,11 +335,80 @@ and (max-width : 600px) {
 	.badge {
 		&.count {
 			background-color: #D2D2D2;
-			font-size: .65em;
+			font-size: .8em;
 			padding: 1px 7px 1px 7px;
 			margin-left: 5px;
 			position: relative;
 			top: -2px;
 		}
+	}
+}
+
+a.editable-link {
+	font-style: normal;
+	background-color: black !important;
+	color: white !important;
+	border: 2px solid #fff !important;
+	border-radius: 15px !important;
+	font-size: .8em !important;
+	font-weight: bold;
+	padding: 4px 8px 4px 8px !important;
+	box-shadow: 0 0 0px 1px #C5C5C5 !important;
+
+	&:hover {
+		text-decoration: none;
+		background-color: #555 !important;
+	}
+}
+
+form.editable-form {
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 15px;
+	border: none;
+
+	label {
+		color: #9A9A9A !important;
+		font-size: 1.5em !important;
+		font-weight: lighter !important;
+	}
+
+	input.btn {
+		background: #353535 !important;
+		color: #8A8A8A;
+		border: none;
+		border-radius: 15px;
+		font-size: .8em;
+		text-shadow: none;
+		font-weight: bold;
+	}
+
+	input.datetimefield {
+		display: block;
+		margin-left: 0px !important;
+	}
+
+	input.charfield {
+		width: 90%;
+		//background: rgba(0,0,0,0.5);
+		padding-left: 10px;
+		border-radius: 15px;
+		border: 1px solid #353535;
+		//color: #A6A6A6;
+	}
+}
+
+#editable-toolbar {
+	background-color: #252525 !important;
+	border: none !important;
+	box-shadow: 0px 0px 5px 1px #D7D7D7;
+
+	a.toolbar {
+		font-style: normal !important;
+		font-weight: bold !important;
+		border: none;
+		font-size: 0.7em !important;
+		padding: 10px !important;
+		color: #F1F1F1 !important;
+		line-height: 23px;
 	}
 }

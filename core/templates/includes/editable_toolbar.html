@@ -2,13 +2,13 @@
 
 <form id="editable-toolbar" method="POST" action="{% url "admin:logout" %}?{{ REDIRECT_FIELD_NAME }}={{ request.path }}">
     {% csrf_token %}
-    <a id="editable-toolbar-toggle" href="#">&gt;&gt;</a>
+    <a class="toolbar" id="editable-toolbar-toggle" href="#">&gt;&gt;</a>
     {% if editable_obj.get_admin_url  %}
-    <a href="{{ editable_obj.get_admin_url }}">{% trans "Admin" %}</a>
+    <a class="toolbar" href="{{ editable_obj.get_admin_url }}">{% trans "Admin" %}</a>
     {% else %}
-    <a href="{% url "admin:index" %}">{% trans "Admin" %}</a>
+    <a class="toolbar" href="{% url "admin:index" %}">{% trans "Admin" %}</a>
     {% endif %}
-    <a id="editable-toolbar-logout" href="#">{% trans "Log out" %}</a>
+    <a class="toolbar" id="editable-toolbar-logout" href="#">{% trans "Log out" %}</a>
 </form>
 
 <img id="editable-loading" src="{{ STATIC_URL }}mezzanine/img/loadingAnimation.gif" />

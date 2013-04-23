@@ -207,7 +207,7 @@ img {
 .right .panel {
   font-size: .8em; }
   .right .panel h3 {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: normal;
     color: #999;
     margin: 0px; }
@@ -221,8 +221,60 @@ img {
     font-weight: bold; }
   .right .panel .badge.count {
     background-color: #D2D2D2;
-    font-size: .65em;
+    font-size: .8em;
     padding: 1px 7px 1px 7px;
     margin-left: 5px;
     position: relative;
     top: -2px; }
+
+a.editable-link {
+  font-style: normal;
+  background-color: black !important;
+  color: white !important;
+  border: 2px solid white !important;
+  border-radius: 15px !important;
+  font-size: 0.8em !important;
+  font-weight: bold;
+  padding: 4px 8px 4px 8px !important;
+  box-shadow: 0 0 0px 1px #c5c5c5 !important; }
+  a.editable-link:hover {
+    text-decoration: none;
+    background-color: #555555 !important; }
+
+form.editable-form {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border: none; }
+  form.editable-form label {
+    color: #9a9a9a !important;
+    font-size: 1.5em !important;
+    font-weight: lighter !important; }
+  form.editable-form input.btn {
+    background: #353535 !important;
+    color: #8A8A8A;
+    border: none;
+    border-radius: 15px;
+    font-size: .8em;
+    text-shadow: none;
+    font-weight: bold; }
+  form.editable-form input.datetimefield {
+    display: block;
+    margin-left: 0px !important; }
+  form.editable-form input.charfield {
+    width: 90%;
+    padding-left: 10px;
+    border-radius: 15px;
+    border: 1px solid #353535; }
+
+#editable-toolbar {
+  background-color: #252525 !important;
+  border: none !important;
+  box-shadow: 0px 0px 5px 1px #d7d7d7; }
+  #editable-toolbar a.toolbar {
+    font-style: normal !important;
+    font-weight: bold !important;
+    border: none;
+    font-size: 0.7em !important;
+    padding: 10px !important;
+    color: #f1f1f1 !important;
+    line-height: 23px; }
