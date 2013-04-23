@@ -302,7 +302,44 @@ and (max-width : 600px) {
 	.badge.square {
 		border-radius: 0;
 		float: right;
+		right: -10px;
 		position: relative;
 		background: #D5D5D5;
+	}
+}
+
+.right .panel {
+	font-size: .8em;
+
+	h3 {
+		font-size: 1.3em;
+		font-weight: normal;
+		color: #999;
+		margin: 0px;
+	}
+
+	ul.unstyled {
+		padding-left: 0px;
+	}
+
+	h6 {
+		font-weight: normal;
+		color: #C6C6C6;
+	}
+
+	a {
+		color: red;
+		font-weight: bold;
+	}
+
+	.badge {
+		&.count {
+			background-color: #D2D2D2;
+			font-size: .65em;
+			padding: 1px 7px 1px 7px;
+			margin-left: 5px;
+			position: relative;
+			top: -2px;
+		}
 	}
 }

@@ -4,7 +4,7 @@
 {% blog_recent_posts 5 as recent_posts %}
 {% if recent_posts %}
 <h3>{% trans "Recent Posts" %}</h3>
-<ul class="recent-posts">
+<ul class="recent-posts unstyled">
 {% for recent_post in recent_posts %}
 <li><a href="{{ recent_post.get_absolute_url }}"
     >{{ recent_post.title }}</a></li>
@@ -71,6 +71,9 @@
 </ul>
 {% endif %}
 {% endblock %}
+
+{# Uncomment to enable feed block #}
+{% comment %}
 {% block blog_feeds %}
 <h3>{% trans "Feeds" %}</h3>
 {% if tag %}
@@ -89,4 +92,6 @@
     <a href="{% url "blog_post_feed" "rss" %}">{% trans "RSS" %}</a> /
     <a href="{% url "blog_post_feed" "atom" %}">{% trans "Atom" %}</a>
 {% endif %}
+
 {% endblock %}
+{% endcomment %}
