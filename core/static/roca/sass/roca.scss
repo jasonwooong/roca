@@ -203,72 +203,82 @@ and (max-width : 600px) {
 		border-bottom: 5px solid #F2F2F2;
 	}
 
-	.row .middle #comments {
-		font-size: .9em;
-		padding: 15px 15px 25px 15px;
-		background-color: #F8F8F8;
-		border-radius: 25px;
+	.row .middle {
 
-		h3 {
-			padding-left: 10px;
-			margin: 0px 0px 15px;
+		h1.title {
+			margin: 25px 0 25px;
 		}
 
-		form.new-comment {
-			margin: 10px;
-		}
+		#comments {
+			font-size: .9em;
+			padding: 15px 15px 25px 15px;
+			background-color: #F8F8F8;
+			border-radius: 25px;
 
-		.comment {
-			border: 1px solid #E6E6E6;
-			background: none;
-			border-radius: 10px;
-			padding: 0px;
-			background-color: #FDFDFD;
+			h3 {
+				padding-left: 10px;
+				margin: 0px 0px 15px;
+			}
 
-			.author {
-				padding: 10px 10px 10px 20px;
-				border-radius: 10px 10px 0px 0px;
-				background-color: #FAFAFA;
-				border-bottom: 1px solid #F0F0F0;
+			form.new-comment {
+				margin: 10px;
+			}
 
-				strong {
-					color: #2C9721;
+			.comment {
+				border: 1px solid #E6E6E6;
+				background: none;
+				border-radius: 10px;
+				padding: 0px;
+				background-color: #FDFDFD;
+
+				.author {
+					padding: 10px 10px 10px 20px;
+					border-radius: 10px 10px 0px 0px;
+					background-color: #FAFAFA;
+					border-bottom: 1px solid #F0F0F0;
+
+					strong {
+						color: #2C9721;
+					}
+				}
+
+				p.content {
+					padding: 0 15px 0 15px;
+					margin: 20px 0 20px;
+					color: #9A9A9A;
+				}
+
+				.action {
+					text-align: right;
+					padding: 0 25px 10px 25px;
+					color: #9A9A9A;
+
+					a {
+						font-weight: bold;
+						font-size: 1.3em;
+					}
+				}
+
+				.rating {
+					text-align: right;
+					margin: 12px !important;
 				}
 			}
 
-			p.content {
-				padding: 0 15px 0 15px;
-				margin: 20px 0 20px;
-				color: #9A9A9A;
+			textarea {
+				width: 97% !important;
 			}
 
-			.action {
-				text-align: right;
-				padding: 0 25px 10px 25px;
-				color: #9A9A9A;
-
-				a {
-					font-weight: bold;
-					font-size: 1.3em;
-				}
+			p.status {
+				color: #A1A1A1;
+				font-style: italic;
+				padding: 10px 15px 0px 15px;
+				margin: 0px;
 			}
 
-			.rating {
-				text-align: right;
-				margin: 12px !important;
-			}
 		}
 
-		textarea {
-			width: 97% !important;
-		}
-
-		p.status {
-			color: #A1A1A1;
-			font-style: italic;
-			padding: 10px 15px 0px 15px;
-			margin: 0px;
-		}
+		
 	}
 }
 

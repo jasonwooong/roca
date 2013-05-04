@@ -134,6 +134,8 @@ img {
     border: 1px solid #dfdfdf; }
   .container .blog-list-detail {
     border-bottom: 5px solid #f2f2f2; }
+  .container .row .middle h1.title {
+    margin: 25px 0 25px; }
   .container .row .middle #comments {
     font-size: .9em;
     padding: 15px 15px 25px 15px;
