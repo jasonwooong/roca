@@ -104,6 +104,7 @@ if "mezzanine.pages" in settings.INSTALLED_APPS:
     # No BLOG_SLUG means catch-all patterns belong to the blog,
     # so give pages their own prefix and inject them before the
     # blog urlpatterns.
+    blog_installed = "roca.blog" in settings.INSTALLED_APPS or "mezzanine.blog" in settings.INSTALLED_APPS
     if blog_installed and not BLOG_SLUG:
         PAGES_SLUG = getattr(settings, "PAGES_SLUG", "pages").strip("/") + "/"
         blog_patterns_start = urlpatterns.index(blog_patterns[0])
