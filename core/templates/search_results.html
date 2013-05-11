@@ -22,7 +22,7 @@ No results were found in {{ search_type }} matching your query: {{ query }}
 {% endblocktrans %}
 {% else %}
 {% blocktrans with start=results.start_index end=results.end_index total=results.paginator.count %}
-Showing {{ start }} to {{ end }} of {{ total }} results in {{ search_type }} matching your query: {{ query }}
+Showing {{ start }} to {{ end }} of {{ total }} results in {{ search_type }} matching your query: <b>{{ query }}</b>
 {% endblocktrans %}
 {% endif %}
 </p>
