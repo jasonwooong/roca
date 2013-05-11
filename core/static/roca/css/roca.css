@@ -10,28 +10,35 @@ Author: jason
     padding-right: 0;
     padding-left: 0; }
 
-  .container {
+  .container-fluid {
     padding-left: 15px;
     padding-right: 15px; } }
-h6.author {
-  color: #A7A7A7;
-  font-weight: normal; }
+@media (max-width: 480px) {
+  h1.title {
+    text-align: center;
+    font-size: 1.5em; }
 
-h2.title a {
-  color: red;
-  font-weight: normal; }
+  h6.author {
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d5d5d5; }
 
-.container h1 {
-  font-weight: normal;
-  color: #878787; }
+  h2.title {
+    font-size: 1.5em;
+    text-align: center; }
 
+  p.blog-list-detail {
+    text-align: center; } }
 img {
   box-shadow: none; }
 
 .navbar {
   top: -40px;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  margin-bottom: -20px; }
   .navbar .navbar-inner {
     border: none;
     box-shadow: none;
@@ -121,61 +128,84 @@ img {
   z-index: 0;
   position: relative; }
 
-.container {
+.comment-count {
+  float: left;
+  margin-left: 8px; }
+  .comment-count a {
+    color: #737373; }
+
+.container-fluid {
   color: #787878; }
-  .container .content {
+  .container-fluid h1 {
+    font-weight: normal;
+    color: #878787; }
+  .container-fluid h6.author {
+    color: #B2B2B2;
+    font-weight: normal;
+    margin: 3px 0 5px;
+    float: left; }
+  .container-fluid h2.title {
+    margin: 0; }
+    .container-fluid h2.title a {
+      color: red;
+      font-weight: normal; }
+  .container-fluid .content {
     color: #787878;
-    margin: 30px 0 50px; }
-    .container .content p {
-      text-indent: 1em; }
-  .container .map-canvas {
+    display: block;
+    position: relative;
+    margin: 50px 0 50px; }
+  .container-fluid .map-canvas {
     width: 100% !important;
     height: 175px !important;
     border: 1px solid #dfdfdf; }
-  .container .blog-list-detail {
+  .container-fluid .blog-list-detail {
     border-bottom: 5px solid #f2f2f2; }
-  .container .row .middle h1.title {
-    margin: 25px 0 25px; }
-  .container .row .middle #comments {
+  .container-fluid .row-fluid .middle h1.title {
+    color: #565656; }
+  .container-fluid .row-fluid .middle #comments {
     font-size: .9em;
     padding: 15px 15px 25px 15px;
     background-color: #F8F8F8;
-    border-radius: 25px; }
-    .container .row .middle #comments h3 {
+    border-radius: 25px;
+    margin-bottom: 25px; }
+    .container-fluid .row-fluid .middle #comments .timespan {
+      float: none;
+      margin-left: 0; }
+    .container-fluid .row-fluid .middle #comments h3 {
       padding-left: 10px;
       margin: 0px 0px 15px; }
-    .container .row .middle #comments form.new-comment {
+    .container-fluid .row-fluid .middle #comments form.new-comment {
       margin: 10px; }
-    .container .row .middle #comments .comment {
+    .container-fluid .row-fluid .middle #comments .comment {
       border: 1px solid #e6e6e6;
       background: none;
       border-radius: 10px;
       padding: 0px;
       background-color: #FDFDFD; }
-      .container .row .middle #comments .comment .author {
-        padding: 10px 10px 10px 20px;
+      .container-fluid .row-fluid .middle #comments .comment .author {
+        padding: 10px 10px 0px 20px;
         border-radius: 10px 10px 0px 0px;
         background-color: #FAFAFA;
         border-bottom: 1px solid #f0f0f0; }
-        .container .row .middle #comments .comment .author strong {
+        .container-fluid .row-fluid .middle #comments .comment .author strong {
           color: #2C9721; }
-      .container .row .middle #comments .comment p.content {
+      .container-fluid .row-fluid .middle #comments .comment p.content {
         padding: 0 15px 0 15px;
         margin: 20px 0 20px;
         color: #9A9A9A; }
-      .container .row .middle #comments .comment .action {
+      .container-fluid .row-fluid .middle #comments .comment .action {
         text-align: right;
         padding: 0 25px 10px 25px;
         color: #9A9A9A; }
-        .container .row .middle #comments .comment .action a {
+        .container-fluid .row-fluid .middle #comments .comment .action a {
           font-weight: bold;
           font-size: 1.3em; }
-      .container .row .middle #comments .comment .rating {
+      .container-fluid .row-fluid .middle #comments .comment .rating {
         text-align: right;
         margin: 12px !important; }
-    .container .row .middle #comments textarea {
+    .container-fluid .row-fluid .middle #comments textarea {
       width: 97% !important; }
-    .container .row .middle #comments p.status {
+    .container-fluid .row-fluid .middle #comments p.status {
       color: #A1A1A1;
       font-style: italic;
       padding: 10px 15px 0px 15px;
@@ -207,7 +237,11 @@ img {
     background: #D5D5D5; }
 
 .right .panel {
-  font-size: .8em; }
+  font-size: .8em;
+  background: none;
+  border: none;
+  border-top: 1px dotted #d5d5d5;
+  border-radius: 0; }
   .right .panel h3 {
     font-size: 1.5em;
     font-weight: normal;

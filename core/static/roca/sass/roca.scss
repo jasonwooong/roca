@@ -12,28 +12,33 @@ Author: jason
 		padding-left:0;
 	}
 
-	.container {
+	.container-fluid {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 }
 
-h6.author {
-	color: #A7A7A7;
-	font-weight: normal;
-}
-
-h2.title {
-	a {
-		color: red;
-		font-weight: normal;
+@media(max-width: 480px) {
+	h1.title {
+		text-align: center;
+		font-size: 1.5em;
 	}
-}
 
-.container {
-	h1 {
-		font-weight: normal;
-		color: #878787;
+	h6.author {
+		text-align: center;
+		width: 100%;
+		display: block;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #D5D5D5;
+	}
+
+	h2.title {
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	p.blog-list-detail {
+		text-align: center;
 	}
 }
 
@@ -45,6 +50,7 @@ img {
 	top: -40px;
 	position: relative;
 	z-index: 1;
+	margin-bottom: -20px;
 
 	.navbar-inner {
 		border: none;
@@ -181,16 +187,44 @@ and (max-width : 600px) {
 	position: relative;
 }
 
-.container {
+.comment-count {
+	float: left;
+	margin-left: 8px;
+
+	a {
+		color: #737373;
+	}
+}
+
+.container-fluid {
+
 	color: #787878;
+
+	h1 {
+		font-weight: normal;
+		color: #878787;
+	}
+
+	h6.author {
+		color: #B2B2B2;
+		font-weight: normal;
+		margin: 3px 0 5px;
+		float: left;
+	}
+
+	h2.title {
+		margin: 0;
+		a {
+			color: red;
+			font-weight: normal;
+		}
+	}
 
 	.content {
 		color: #787878;
-		margin: 30px 0 50px;
-
-		p {
-			text-indent: 1em;
-		}
+		display: block;
+		position: relative;
+		margin: 50px 0 50px;
 	}
 
 	.map-canvas {
@@ -203,10 +237,11 @@ and (max-width : 600px) {
 		border-bottom: 5px solid #F2F2F2;
 	}
 
-	.row .middle {
+	.row-fluid .middle {
 
 		h1.title {
-			margin: 25px 0 25px;
+			color: #565656;
+			//margin: 25px 0 25px;
 		}
 
 		#comments {
@@ -214,6 +249,12 @@ and (max-width : 600px) {
 			padding: 15px 15px 25px 15px;
 			background-color: #F8F8F8;
 			border-radius: 25px;
+			margin-bottom: 25px;
+
+			.timespan {
+				float: none;
+				margin-left: 0;
+			}
 
 			h3 {
 				padding-left: 10px;
@@ -232,7 +273,7 @@ and (max-width : 600px) {
 				background-color: #FDFDFD;
 
 				.author {
-					padding: 10px 10px 10px 20px;
+					padding: 10px 10px 0px 20px;
 					border-radius: 10px 10px 0px 0px;
 					background-color: #FAFAFA;
 					border-bottom: 1px solid #F0F0F0;
@@ -276,9 +317,7 @@ and (max-width : 600px) {
 				margin: 0px;
 			}
 
-		}
-
-		
+		}		
 	}
 }
 
@@ -320,6 +359,10 @@ and (max-width : 600px) {
 
 .right .panel {
 	font-size: .8em;
+	background: none;
+	border: none;
+	border-top: 1px dotted #D5D5D5;
+	border-radius: 0;
 
 	h3 {
 		font-size: 1.5em;

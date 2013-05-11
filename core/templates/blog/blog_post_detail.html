@@ -34,24 +34,9 @@
     {% if blog_post.show_location %}
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
     {% endif %}
-</h6>
 {% endeditable %}
 {% endblock %}
-{% block blog_post_detail_commentlink %}
-<p>
-    {% if blog_post.allow_comments %}
-        {% if settings.COMMENTS_DISQUS_SHORTNAME %}
-            <a href="{{ blog_post.get_absolute_url }}#disqus_thread"
-                data-disqus-identifier="{% disqus_id_for blog_post %}">{% spaceless %}
-                {% trans "Comments" %}
-            {% endspaceless %}</a>
-        {% else %}<a href="#comments">{% spaceless %}
-            {% blocktrans count blog_post.comments_count as comments_count %}1 comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
-            {% endspaceless %}</a>
-        {% endif %}
-    {% endif %}
-</p>
-{% endblock %}
+</h6>
 
 {% block blog_post_detail_featured_image %}
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
