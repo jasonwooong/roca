@@ -63,7 +63,7 @@ function justifyGalleries() {
     Randomly select a color to be used as navbar background on each pageload.
 
 */
-function randomizeNavbar() {
+function colorizeNavbar() {
     if (!$(".navbar .navbar-inner").length) {
         console.warn('Selector ".navbar .navbar-inner" does not exist.  Cannot randomize background color.');
         return;
@@ -89,9 +89,3 @@ function randomizeNavbar() {
     $(".navbar .navbar-inner").css('background', 'rgba(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ',' + ALPHA + ')');
     $(".navbar .navbar-inner").css('border-top', '1px solid rgba(' + rgb_light[0] + ',' + rgb_light[1] + ',' + rgb_light[2] + ',' + 0.8 + ')');
 }
-
-$(document).ready(function () {
-    justifyGalleries();
-    randomizeNavbar();    
-    enableParallax();
-})

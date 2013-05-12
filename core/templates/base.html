@@ -36,12 +36,29 @@
 <script src="{{ STATIC_URL }}roca/js/jquery.justifiedgallery.min.js"></script>
 <script src="{{ STATIC_URL }}roca/js/roca.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+{% if settings.COLORIZE_NAVBAR %}
+<script>
+
+document.COLORIZE_NAVBAR = true;
+
+</script>
+{% endif %}
+
 <script>
 
 $(function() {
     $('.middleinput:text, textarea').addClass('xlarge');
     $('.control-group label').addClass('control-label');
 });
+
+$(document).ready(function () {
+    if(document.COLORIZE_NAVBAR)
+        colorizeNavbar();
+
+    justifyGalleries();
+    enableParallax();
+})
 
 </script>
 {% block extra_js %}{% endblock %}
