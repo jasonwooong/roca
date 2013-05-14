@@ -1,0 +1,41 @@
+.navbar {
+	.navbar-inner {
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000, endColorstr=#90000000);
+
+		.navbar-search {
+			input.search-query {
+				background: rgb(20,20,20);
+				border: 1px solid #535353;
+				color: #FFF;
+				line-height: 20px;
+				padding: 0px 10px 0px 10px;
+			}
+		}
+	}
+}
+
+.right .panel {
+	.badge {
+		&.count {
+			background: none;
+			font-size: .8em;
+			padding: 1px 7px 1px 7px;
+			margin-left: 5px;
+			position: relative;
+			top: 0px;
+			color: #C6C6C6;
+
+			&:before {
+				content: "(";
+			}
+
+			&:after {
+				content: ")";
+			}
+		}
+	}
+}
+
+.image-header {
+	text-align: center;
+}

@@ -43,6 +43,8 @@ Author: jason
 }
 
 img {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -55,14 +57,25 @@ img {
 	.navbar-inner {
 		border: none;
 		box-shadow: none;
-		background: rgba(20,20,20,.5);
-		border-top: 1px solid rgba(100,100,100,.5);
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		border-top: 1px solid rgb(100,100,100);
+		border-top: 1px solid rgba(100,100,100,0.5);
+
+		background-image: #353535;
+		background-image: rgba(20,20,20,0.5);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000)";
+
 
 		a.brand {
 			color: #E7E7E7;
 			font-weight: bold;
 			font-size: 1.3em;
 			text-shadow: none;
+			-webkit-text-shadow: none;
+			-moz-text-shadow: none;
+			-ms-text-shadow: none;
 			line-height: 1em;
 		}
 
@@ -75,16 +88,23 @@ img {
 			li a {
 				color: #C5C5C5;
 				text-shadow: none;
+				-webkit-text-shadow: none;
+				-moz-text-shadow: none;
+				-ms-text-shadow: none;
 			}
 
 			.divider-vertical {
+				border-right: 1px solid rgb(200, 200, 200);
 				border-right: 1px solid rgba(200, 200, 200, 0.2);
+				border-left: 1px solid rgb(80, 80, 80);
 				border-left: 1px solid rgba(80, 80, 80, 0.1);
 			}
 
 			.active a, .active a:hover {
 				background: none;
 				box-shadow: none;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
 				color: #FFF;
 				font-weight: bold;
 			}
@@ -92,6 +112,7 @@ img {
 
 		.navbar-search {
 			input.search-query {
+				background: rgb(128,128,128);
 				background: rgba(255,255,255,0.2);
 				border: none;
 				color: #FFF;
@@ -117,14 +138,19 @@ img {
 			}
 
 			select {
+				background: rgb(0,0,0);
 				background: rgba(0,0,0,0.3);
 				color: #D8D8D8;
 				border-color: #535353;
 			}
 
 			input.btn {
+				background: rgb(0,0,0);
 				background: rgba(0,0,0,0.3);
 				text-shadow: 0px 1px 1px #FFF;
+				-webkit-text-shadow: 0px 1px 1px #FFF;
+				-moz-text-shadow: 0px 1px 1px #FFF;
+				-ms-text-shadow: 0px 1px 1px #FFF;
 				padding: 3px 20px 3px 20px;
 				color: #000;
 				font-weight: bold;
@@ -136,8 +162,8 @@ img {
 			color: #353535;
 
 			span.icon-bar {
+				background: rgb(255,255,255);
 				background: rgba(255,255,255,0.3);
-
 			}
 		}
 
@@ -145,6 +171,8 @@ img {
 			form.navbar-search {
 				border: none;
 				box-shadow: none;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
 			}
 
 			li :hover {
@@ -183,8 +211,9 @@ and (max-width : 600px) {
 	max-height: 550px;
 	overflow: hidden;
 	background: #000;
-	z-index: 0;
+	z-index: -1;
 	position: relative;
+	text-align: center;
 }
 
 .comment-count {
@@ -248,8 +277,11 @@ and (max-width : 600px) {
 			font-size: .9em;
 			padding: 15px 15px 25px 15px;
 			background-color: #F8F8F8;
-			border-radius: 25px;
 			margin-bottom: 25px;
+
+			border-radius: 25px;
+			-webkit-border-radius: 25px;
+			-moz-border-radius: 25px;
 
 			.timespan {
 				float: none;
@@ -268,15 +300,21 @@ and (max-width : 600px) {
 			.comment {
 				border: 1px solid #E6E6E6;
 				background: none;
-				border-radius: 10px;
 				padding: 0px;
 				background-color: #FDFDFD;
 
+				border-radius: 10px;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+
 				.author {
 					padding: 10px 10px 0px 20px;
-					border-radius: 10px 10px 0px 0px;
 					background-color: #FAFAFA;
 					border-bottom: 1px solid #F0F0F0;
+
+					border-radius: 10px 10px 0px 0px;
+					-webkit-border-radius: 10px 10px 0px 0px;
+					-moz-border-radius: 10px 10px 0px 0px;
 
 					strong {
 						color: #2C9721;
@@ -339,9 +377,12 @@ and (max-width : 600px) {
 
 	a.more {
 		padding: 5px 15px 5px 15px;
-		border-radius: 15px;
 		background: #EAEAEA;
 		margin-left: 10px;
+
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
 
 		&:hover {
 			text-decoration: none !important;
@@ -349,11 +390,14 @@ and (max-width : 600px) {
 	}
 
 	.badge.square {
-		border-radius: 0;
 		float: right;
 		right: -10px;
 		position: relative;
 		background: #D5D5D5;
+
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
 	}
 }
 
@@ -362,7 +406,10 @@ and (max-width : 600px) {
 	background: none;
 	border: none;
 	border-top: 1px dotted #D5D5D5;
+
 	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
 
 	h3 {
 		font-size: 1.5em;
@@ -402,11 +449,18 @@ a.editable-link {
 	background-color: black !important;
 	color: white !important;
 	border: 2px solid #fff !important;
-	border-radius: 15px !important;
+
 	font-size: .8em !important;
 	font-weight: bold;
 	padding: 4px 8px 4px 8px !important;
+
 	box-shadow: 0 0 0px 1px #C5C5C5 !important;
+	-webkit-box-shadow: 0 0 0px 1px #C5C5C5 !important;
+	-moz-box-shadow: 0 0 0px 1px #C5C5C5 !important;
+
+	border-radius: 15px !important;
+	-webkit-border-radius: 15px !important;
+	-moz-border-radius: 15px !important;
 
 	&:hover {
 		text-decoration: none;
@@ -415,9 +469,13 @@ a.editable-link {
 }
 
 form.editable-form {
+	border: none;
+
+	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.5);
 	border-radius: 15px;
-	border: none;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 
 	label {
 		color: #9A9A9A !important;
@@ -430,6 +488,9 @@ form.editable-form {
 		color: #8A8A8A;
 		border: none;
 		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+
 		font-size: .8em;
 		text-shadow: none;
 		font-weight: bold;
@@ -442,11 +503,12 @@ form.editable-form {
 
 	input.charfield {
 		width: 90%;
-		//background: rgba(0,0,0,0.5);
 		padding-left: 10px;
-		border-radius: 15px;
 		border: 1px solid #353535;
-		//color: #A6A6A6;
+
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
 	}
 }
 
@@ -454,6 +516,8 @@ form.editable-form {
 	background-color: #252525 !important;
 	border: none !important;
 	box-shadow: 0px 0px 5px 1px #D7D7D7;
+	-webkit-box-shadow: 0px 0px 5px 1px #D7D7D7;
+	-moz-box-shadow: 0px 0px 5px 1px #D7D7D7;
 
 	a.toolbar {
 		font-style: normal !important;

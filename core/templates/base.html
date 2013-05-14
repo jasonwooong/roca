@@ -53,8 +53,12 @@ $(function() {
 });
 
 $(document).ready(function () {
-    if(document.COLORIZE_NAVBAR)
+    if(document.COLORIZE_NAVBAR) {
         colorizeNavbar();
+    } else {
+        $(".navbar .navbar-inner").css('background', 'rgba(20,20,20,0.75)');
+        $(".navbar .navbar-inner").css('border-top', '1px solid rgba(75,75,75,0.6)');
+    }
 
     justifyGalleries();
     enableParallax();
@@ -63,8 +67,17 @@ $(document).ready(function () {
 </script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
+
+<!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}roca/css/roca-ie.css" />
+<![endif]-->
+
 <!--[if lt IE 9]>
 <script src="{{ STATIC_URL }}js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}roca/css/roca-ie8.css" />
 <![endif]-->
 
 {% block extra_head %}{% endblock %}
@@ -73,7 +86,7 @@ $(document).ready(function () {
 <body id="{% block body_id %}body{% endblock %}">
 
 <div id="header" class="image-header">
-    <a href="{{ photo_header.href }}"><img width="100%" src="{{ photo_header.img }}"/></a>
+    <a href="{{ photo_header.href }}"><img class="header" width="100%" src="{{ photo_header.img }}"/></a>
 </div>
 
 <div class="navbar">

@@ -21,7 +21,7 @@ register_setting(
 register_setting(
     name="COLORIZE_NAVBAR",
     label=_("Colorize top navigation bar"),
-    description=_("Enable this setting to randomly colorize top navigation bar"),
+    description=_("Enable this setting to randomly colorize top navigation bar. (IE 9 and higher)"),
     editable=True,
     default=True,
 )
