@@ -93,6 +93,17 @@ img {
 				-ms-text-shadow: none;
 			}
 
+			&.in.collapse {
+				li a {
+					&:hover {
+						&:after {
+							content: "\2190";
+							margin-left: 10px;
+						}
+					}
+				}	
+			}
+
 			.divider-vertical {
 				border-right: 1px solid rgb(200, 200, 200);
 				border-right: 1px solid rgba(200, 200, 200, 0.2);

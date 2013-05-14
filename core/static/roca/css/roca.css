@@ -70,6 +70,9 @@ img {
       -webkit-text-shadow: none;
       -moz-text-shadow: none;
       -ms-text-shadow: none; }
+    .navbar .navbar-inner .nav-collapse.in.collapse li a:hover:after {
+      content: "\2190";
+      margin-left: 10px; }
     .navbar .navbar-inner .nav-collapse .divider-vertical {
       border-right: 1px solid #c8c8c8;
       border-right: 1px solid rgba(200, 200, 200, 0.2);
