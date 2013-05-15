@@ -30,7 +30,13 @@ Author: jason
     text-align: center; }
 
   p.blog-list-detail {
-    text-align: center; } }
+    text-align: center; }
+
+  .blog-post {
+    border-top: none !important; }
+
+  .middle {
+    margin-bottom: 25px; } }
 img {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -165,6 +171,12 @@ img {
   .comment-count a {
     color: #737373; }
 
+.blog-post {
+  border-top: 1px dotted #d5d5d5;
+  padding-top: 15px; }
+  .blog-post.first {
+    border-top: none; }
+
 .container-fluid {
   color: #787878; }
   .container-fluid h1 {
@@ -190,7 +202,7 @@ img {
     height: 175px !important;
     border: 1px solid #dfdfdf; }
   .container-fluid .blog-list-detail {
-    border-bottom: 5px solid #f2f2f2; }
+    border-bottom: none; }
   .container-fluid .row-fluid .middle h1.title {
     color: #565656; }
   .container-fluid .row-fluid .middle #comments {

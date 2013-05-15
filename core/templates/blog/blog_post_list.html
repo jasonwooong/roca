@@ -82,6 +82,9 @@
 {% endif %}
 
 {% for blog_post in blog_posts.object_list %}
+
+<div class="blog-post {% if forloop.first %} first {% elif forloop.last %} last {% endif %}">
+
 {% block blog_post_list_post_title %}
 {% editable blog_post.title %}
 <h2 class="title">
@@ -173,7 +176,11 @@
     </a>
     {% endif %}
 </p>
+
 {% endblock %}
+
+</div>
+
 {% endfor %}
 
 {% pagination_for blog_posts %}

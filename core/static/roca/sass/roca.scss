@@ -40,6 +40,14 @@ Author: jason
 	p.blog-list-detail {
 		text-align: center;
 	}
+
+	.blog-post {
+		border-top: none !important;
+	}
+
+	.middle {
+		margin-bottom: 25px;
+	}
 }
 
 img {
@@ -236,6 +244,15 @@ and (max-width : 600px) {
 	}
 }
 
+.blog-post {
+	border-top: 1px dotted #D5D5D5;
+	padding-top: 15px;
+
+	&.first {
+		border-top: none;
+	}
+}
+
 .container-fluid {
 
 	color: #787878;
@@ -274,7 +291,7 @@ and (max-width : 600px) {
 	}
 
 	.blog-list-detail {
-		border-bottom: 5px solid #F2F2F2;
+		border-bottom: none;
 	}
 
 	.row-fluid .middle {
