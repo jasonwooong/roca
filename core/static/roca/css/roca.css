@@ -203,62 +203,64 @@ img {
     border: 1px solid #dfdfdf; }
   .container-fluid .blog-list-detail {
     border-bottom: none; }
-  .container-fluid .row-fluid .middle h1.title {
-    color: #565656; }
-  .container-fluid .row-fluid .middle #comments {
-    font-size: .9em;
-    padding: 15px 15px 25px 15px;
-    background-color: #F8F8F8;
-    margin-bottom: 25px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px; }
-    .container-fluid .row-fluid .middle #comments .timespan {
-      float: none;
-      margin-left: 0; }
-    .container-fluid .row-fluid .middle #comments h3 {
-      padding-left: 10px;
-      margin: 0px 0px 15px; }
-    .container-fluid .row-fluid .middle #comments form.new-comment {
-      margin: 10px; }
-    .container-fluid .row-fluid .middle #comments .comment {
-      border: 1px solid #e6e6e6;
-      background: none;
-      padding: 0px;
-      background-color: #FDFDFD;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px; }
-      .container-fluid .row-fluid .middle #comments .comment .author {
-        padding: 10px 10px 0px 20px;
-        background-color: #FAFAFA;
-        border-bottom: 1px solid #f0f0f0;
-        border-radius: 10px 10px 0px 0px;
-        -webkit-border-radius: 10px 10px 0px 0px;
-        -moz-border-radius: 10px 10px 0px 0px; }
-        .container-fluid .row-fluid .middle #comments .comment .author strong {
-          color: #2C9721; }
-      .container-fluid .row-fluid .middle #comments .comment p.content {
-        padding: 0 15px 0 15px;
-        margin: 20px 0 20px;
-        color: #9A9A9A; }
-      .container-fluid .row-fluid .middle #comments .comment .action {
-        text-align: right;
-        padding: 0 25px 10px 25px;
-        color: #9A9A9A; }
-        .container-fluid .row-fluid .middle #comments .comment .action a {
-          font-weight: bold;
-          font-size: 1.3em; }
-      .container-fluid .row-fluid .middle #comments .comment .rating {
-        text-align: right;
-        margin: 12px !important; }
-    .container-fluid .row-fluid .middle #comments textarea {
-      width: 97% !important; }
-    .container-fluid .row-fluid .middle #comments p.status {
-      color: #A1A1A1;
-      font-style: italic;
-      padding: 10px 15px 0px 15px;
-      margin: 0px; }
+  .container-fluid .row-fluid .middle {
+    padding-left: 20px; }
+    .container-fluid .row-fluid .middle h1.title {
+      color: #565656; }
+    .container-fluid .row-fluid .middle #comments {
+      font-size: .9em;
+      padding: 15px 15px 25px 15px;
+      background-color: #F8F8F8;
+      margin-bottom: 25px;
+      border-radius: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px; }
+      .container-fluid .row-fluid .middle #comments .timespan {
+        float: none;
+        margin-left: 0; }
+      .container-fluid .row-fluid .middle #comments h3 {
+        padding-left: 10px;
+        margin: 0px 0px 15px; }
+      .container-fluid .row-fluid .middle #comments form.new-comment {
+        margin: 10px; }
+      .container-fluid .row-fluid .middle #comments .comment {
+        border: 1px solid #e6e6e6;
+        background: none;
+        padding: 0px;
+        background-color: #FDFDFD;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px; }
+        .container-fluid .row-fluid .middle #comments .comment .author {
+          padding: 10px 10px 0px 20px;
+          background-color: #FAFAFA;
+          border-bottom: 1px solid #f0f0f0;
+          border-radius: 10px 10px 0px 0px;
+          -webkit-border-radius: 10px 10px 0px 0px;
+          -moz-border-radius: 10px 10px 0px 0px; }
+          .container-fluid .row-fluid .middle #comments .comment .author strong {
+            color: #2C9721; }
+        .container-fluid .row-fluid .middle #comments .comment p.content {
+          padding: 0 15px 0 15px;
+          margin: 20px 0 20px;
+          color: #9A9A9A; }
+        .container-fluid .row-fluid .middle #comments .comment .action {
+          text-align: right;
+          padding: 0 25px 10px 25px;
+          color: #9A9A9A; }
+          .container-fluid .row-fluid .middle #comments .comment .action a {
+            font-weight: bold;
+            font-size: 1.3em; }
+        .container-fluid .row-fluid .middle #comments .comment .rating {
+          text-align: right;
+          margin: 12px !important; }
+      .container-fluid .row-fluid .middle #comments textarea {
+        width: 97% !important; }
+      .container-fluid .row-fluid .middle #comments p.status {
+        color: #A1A1A1;
+        font-style: italic;
+        padding: 10px 15px 0px 15px;
+        margin: 0px; }
 
 .result-object {
   background: #F8F8F8;
@@ -320,9 +322,9 @@ img {
 
 a.editable-link {
   font-style: normal;
-  background-color: black !important;
+  background-color: #6aa6d7 !important;
   color: white !important;
-  border: 2px solid white !important;
+  border: none;
   font-size: 0.8em !important;
   font-weight: bold;
   padding: 4px 8px 4px 8px !important;
