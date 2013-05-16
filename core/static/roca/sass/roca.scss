@@ -6,19 +6,12 @@ Author: jason
 
 */
 
-@media(max-width:767px){
+@media(max-width: 767px) {
 	body {
 		padding-right:0;
 		padding-left:0;
 	}
 
-	.container-fluid {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-}
-
-@media(max-width: 480px) {
 	h1.title {
 		text-align: center;
 		font-size: 1.5em;
@@ -45,8 +38,13 @@ Author: jason
 		border-top: none !important;
 	}
 
-	.middle {
-		margin-bottom: 25px;
+	.container-fluid {
+		padding-left: 0px;
+		padding-right: 15px;
+
+		.row-fluid .middle {
+			margin-bottom: 25px;
+		}
 	}
 }
 
@@ -271,9 +269,11 @@ and (max-width : 600px) {
 
 	h2.title {
 		margin: 0;
+		font-weight: lighter;
+		font-size: 1.8em;
 		a {
 			color: red;
-			font-weight: normal;
+			font-weight: lighter;
 		}
 	}
 
@@ -299,7 +299,9 @@ and (max-width : 600px) {
 
 		h1.title {
 			color: #565656;
-			//margin: 25px 0 25px;
+			font-weight: lighter;
+			font-size: 2em;
+			margin-bottom: 1px;
 		}
 
 		#comments {
@@ -458,7 +460,7 @@ and (max-width : 600px) {
 
 	a {
 		color: red;
-		font-weight: bold;
+		font-weight: normal;
 	}
 
 	.badge {
@@ -477,7 +479,7 @@ a.editable-link {
 	font-style: normal;
 	background-color: #6AA6D7 !important;
 	color: white !important;
-	border: none;
+	border: none;;
 
 	font-size: .8em !important;
 	font-weight: bold;

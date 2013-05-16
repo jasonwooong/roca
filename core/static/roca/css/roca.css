@@ -10,10 +10,6 @@ Author: jason
     padding-right: 0;
     padding-left: 0; }
 
-  .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px; } }
-@media (max-width: 480px) {
   h1.title {
     text-align: center;
     font-size: 1.5em; }
@@ -35,8 +31,11 @@ Author: jason
   .blog-post {
     border-top: none !important; }
 
-  .middle {
-    margin-bottom: 25px; } }
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 15px; }
+    .container-fluid .row-fluid .middle {
+      margin-bottom: 25px; } }
 img {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -188,10 +187,12 @@ img {
     margin: 3px 0 5px;
     float: left; }
   .container-fluid h2.title {
-    margin: 0; }
+    margin: 0;
+    font-weight: lighter;
+    font-size: 1.8em; }
     .container-fluid h2.title a {
       color: red;
-      font-weight: normal; }
+      font-weight: lighter; }
   .container-fluid .content {
     color: #787878;
     display: block;
@@ -206,7 +207,10 @@ img {
   .container-fluid .row-fluid .middle {
     padding-left: 20px; }
     .container-fluid .row-fluid .middle h1.title {
-      color: #565656; }
+      color: #565656;
+      font-weight: lighter;
+      font-size: 2em;
+      margin-bottom: 1px; }
     .container-fluid .row-fluid .middle #comments {
       font-size: .9em;
       padding: 15px 15px 25px 15px;
@@ -311,7 +315,7 @@ img {
     color: #C6C6C6; }
   .right .panel a {
     color: red;
-    font-weight: bold; }
+    font-weight: normal; }
   .right .panel .badge.count {
     background-color: #D2D2D2;
     font-size: .8em;
