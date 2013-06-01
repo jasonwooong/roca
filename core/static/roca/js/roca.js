@@ -1,3 +1,18 @@
+function rocaInit() {
+    if(document.COLORIZE_NAVBAR) {
+        colorizeNavbar();
+    } else {
+        $(".navbar .navbar-inner").css('background', 'rgba(20,20,20,0.75)');
+        $(".navbar .navbar-inner").css('border-top', '1px solid rgba(75,75,75,0.6)');
+    }
+
+    if(document.ENABLE_PARALLAX) {
+        enableParallax();
+    }
+
+    justifyGalleries();
+}
+
 /*
     Parallax header effect:
     http://abduzeedo.com/super-easy-parallax-effect-jquery

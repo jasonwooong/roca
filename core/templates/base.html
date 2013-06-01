@@ -51,6 +51,14 @@ document.COLORIZE_NAVBAR = true;
 </script>
 {% endif %}
 
+{% if settings.ENABLE_PARALLAX %}
+<script>
+
+document.ENABLE_PARALLAX = true;
+
+</script>
+{% endif %}
+
 <script>
 
 $(function() {
@@ -59,15 +67,7 @@ $(function() {
 });
 
 $(document).ready(function () {
-    if(document.COLORIZE_NAVBAR) {
-        colorizeNavbar();
-    } else {
-        $(".navbar .navbar-inner").css('background', 'rgba(20,20,20,0.75)');
-        $(".navbar .navbar-inner").css('border-top', '1px solid rgba(75,75,75,0.6)');
-    }
-
-    justifyGalleries();
-    enableParallax();
+    rocaInit();
 })
 
 </script>
