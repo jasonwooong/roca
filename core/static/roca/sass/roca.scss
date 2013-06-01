@@ -168,6 +168,20 @@ img {
 						}
 					}
 				}	
+
+				.dropdown ul.dropdown-menu {
+					a {
+						font-weight: normal;
+					}
+					a:hover {
+						font-weight: normal;
+						color: #fff;
+					}
+
+					.active a {
+						font-weight: bold;
+					}
+				}
 			}
 
 			li.dropdown {
@@ -205,6 +219,20 @@ img {
 				-moz-box-shadow: none;
 				color: #FFF;
 				font-weight: bold;
+			}
+
+			.dropdown ul.dropdown-menu {
+				a {
+					font-weight: normal;
+				}
+				a:hover {
+					font-weight: normal;
+					color: #323232;
+				}
+
+				.active a {
+					font-weight: bold;
+				}
 			}
 		}
 
