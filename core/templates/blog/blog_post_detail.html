@@ -21,7 +21,29 @@
 {% endblock %}
 
 {% block main %}
-
+{% if blog_post.show_map %}
+<div id="map-{{ blog_post.pk }}" class="map-canvas" style="height: 200px; width: 200px;"> </div>
+<script>
+    $(document).ready(function() {
+        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude }}, {{ blog_post.geo.longitude }});
+        var mapOptions = {
+          center: latlng,
+          zoom: 10,
+          scrollwheel: false,
+          mapTypeControl: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
+            mapOptions['draggable'] = false; 
+        var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
+            mapOptions);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+        });
+    });   
+</script>
+{% endif %}
 {% block blog_post_detail_postedby %}
 {% editable blog_post.publish_date %}
 <h6 class="author">
@@ -46,30 +68,6 @@
 
 {% if settings.COMMENTS_DISQUS_SHORTNAME %}
 {% include "generic/includes/disqus_counts.html" %}
-{% endif %}
-
-{% if blog_post.show_map %}
-<div id="map-{{ blog_post.pk }}" class="map-canvas" style="height: 200px; width: 200px;"> </div>
-<script>
-    $(document).ready(function() {
-        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude }}, {{ blog_post.geo.longitude }});
-        var mapOptions = {
-          center: latlng,
-          zoom: 10,
-          scrollwheel: false,
-          mapTypeControl: false,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
-            mapOptions['draggable'] = false; 
-        var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
-            mapOptions);
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-        });
-    });   
-</script>
 {% endif %}
 
 <div class="content">

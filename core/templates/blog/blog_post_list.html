@@ -93,6 +93,31 @@
 {% endeditable %}
 {% endblock %}
 {% block blog_post_list_post_metainfo %}
+
+{% if blog_post.show_map %}
+<div id="map-{{ blog_post.pk }}" class="map-canvas" style="height: 200px; width: 200px;"> </div>
+<script>
+    $(document).ready(function() {
+        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude }}, {{ blog_post.geo.longitude }});
+        var mapOptions = {
+          center: latlng,
+          zoom: 8,
+          scrollwheel: false,
+          mapTypeControl: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
+            mapOptions['draggable'] = false; 
+        var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
+            mapOptions);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+        });
+    });   
+</script>
+{% endif %}
+
 {% editable blog_post.publish_date %}
 <h6 class="author">
     {% trans "Posted by" %}
@@ -118,30 +143,6 @@
 {% block blog_post_list_post_featured_image %}
 <img class="featured-thumb" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}">
 {% endblock %}
-{% endif %}
-
-{% if blog_post.show_map %}
-<div id="map-{{ blog_post.pk }}" class="map-canvas" style="height: 200px; width: 200px;"> </div>
-<script>
-    $(document).ready(function() {
-        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude }}, {{ blog_post.geo.longitude }});
-        var mapOptions = {
-          center: latlng,
-          zoom: 8,
-          scrollwheel: false,
-          mapTypeControl: false,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
-            mapOptions['draggable'] = false; 
-        var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
-            mapOptions);
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-        });
-    });   
-</script>
 {% endif %}
 
 <div class="content">
