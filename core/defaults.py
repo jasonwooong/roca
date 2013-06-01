@@ -6,8 +6,16 @@ register_setting(
     name="TEMPLATE_ACCESSIBLE_SETTINGS",
     description=_("Sequence of setting names available within templates."),
     editable=False,
-    default=("COLORIZE_NAVBAR", "DEFAULT_HEADER_PHOTO"),
+    default=("COLORIZE_NAVBAR", "DEFAULT_HEADER_PHOTO", "ENABLE_PARALLAX"),
     append=True,
+)
+
+register_setting(
+    name="ENABLE_PARALLAX",
+    label=_("Enable scrolling effect on header photo"),
+    description=_("Disable this feature if experiencing performance issues"),
+    editable=True,
+    default=True,
 )
 
 register_setting(
