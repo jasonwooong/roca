@@ -119,9 +119,12 @@ img {
       font-weight: bold; }
     .navbar .navbar-inner .nav-collapse li.dropdown a .caret {
       border-top-color: #9B9B9B; }
-    .navbar .navbar-inner .nav-collapse li.dropdown ul.dropdown-menu li a {
-      text-align: left;
-      color: #A5A5A5; }
+    .navbar .navbar-inner .nav-collapse li.dropdown ul.dropdown-menu {
+      top: 42px;
+      background: white; }
+      .navbar .navbar-inner .nav-collapse li.dropdown ul.dropdown-menu li a {
+        text-align: left;
+        color: #A5A5A5; }
     .navbar .navbar-inner .nav-collapse li a {
       color: #C5C5C5;
       text-shadow: none;
@@ -140,13 +143,15 @@ img {
       -moz-box-shadow: none;
       color: #FFF;
       font-weight: bold; }
-    .navbar .navbar-inner .nav-collapse .dropdown ul.dropdown-menu a {
-      font-weight: normal; }
-    .navbar .navbar-inner .nav-collapse .dropdown ul.dropdown-menu a:hover {
-      font-weight: normal;
-      color: #323232; }
-    .navbar .navbar-inner .nav-collapse .dropdown ul.dropdown-menu .active a {
-      font-weight: bold; }
+    .navbar .navbar-inner .nav-collapse .dropdown ul.dropdown-menu {
+      background: inherit; }
+      .navbar .navbar-inner .nav-collapse .dropdown ul.dropdown-menu a {
+        font-weight: normal; }
+      .navbar .navbar-inner .nav-collapse .dropdown ul.dropdown-menu a:hover {
+        font-weight: normal;
+        color: #323232; }
+      .navbar .navbar-inner .nav-collapse .dropdown ul.dropdown-menu .active a {
+        font-weight: bold; }
     .navbar .navbar-inner .navbar-search input.search-query {
       background: gray;
       background: rgba(255, 255, 255, 0.2);

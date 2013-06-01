@@ -185,6 +185,8 @@ img {
 				}
 
 				ul.dropdown-menu {
+					top: 42px;
+					background: white;
 					li a {
 						text-align: left;
 						color: #A5A5A5;
@@ -217,6 +219,7 @@ img {
 			}
 
 			.dropdown ul.dropdown-menu {
+				background: inherit;
 				a {
 					font-weight: normal;
 				}
