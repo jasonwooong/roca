@@ -29,22 +29,6 @@ Author: jason
 		text-align: left;
 	}
 
-	p.blog-list-detail {
-		text-align: right;
-		font-size: .9em;
-		font-weight: bold;
-		color: #D9D9D9;
-		padding: 0 3px;
-		margin: 5px 0 0px;
-		a {
-			color: #D2D2D2;
-			text-shadow: 0px -1px 0 #FFF;
-			-webkit-text-shadow: 0px -1px 0 #FFF;
-			-moz-text-shadow: 0px -1px 0 #FFF;
-			-ms-text-shadow: 0px -1px 0 #FFF;
-		}
-	}
-
 	.blog-post {
 		border-top: none !important;
 	}
@@ -394,8 +378,21 @@ img {
 		margin: 0 0 10px 0;
 	}
 
-	.blog-list-detail {
+	p.blog-list-detail {
+		text-align: right;
+		font-size: .9em;
+		font-weight: bold;
+		color: #D9D9D9;
+		padding: 0 3px;
+		margin: 5px 0 20px;
 		border-bottom: none;
+		a {
+			color: #D2D2D2;
+			text-shadow: 0px -1px 0 #FFF;
+			-webkit-text-shadow: 0px -1px 0 #FFF;
+			-moz-text-shadow: 0px -1px 0 #FFF;
+			-ms-text-shadow: 0px -1px 0 #FFF;
+		}
 	}
 
 	.row-fluid .middle {
