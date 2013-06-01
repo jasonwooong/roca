@@ -13,25 +13,24 @@ Author: jason
 	}
 
 	h1.title {
-		text-align: center;
+		text-align: left;
 		font-size: 1.5em;
 	}
 
 	h6.author {
-		text-align: center;
+		text-align: left;
 		width: 100%;
 		display: block;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #D5D5D5;
 	}
 
 	h2.title {
-		font-size: 1.5em;
-		text-align: center;
+		font-size: 1.4em !important;
+		text-align: left;
 	}
 
 	p.blog-list-detail {
-		text-align: center;
+		text-align: left;
 	}
 
 	.blog-post {
@@ -649,5 +648,24 @@ form.editable-form {
 		color: #F1F1F1 !important;
 		line-height: 23px;
 		text-shadow: 0px -1px 1px #FFF !important;
+	}
+}
+
+footer {
+	font-size: 13px;
+	font-weight: bold;
+	border-top: 1px solid #EBEBEB;
+	color: #ABABAB;
+
+	a {
+		color: #D2D2D2;
+		text-shadow: 0px -1px 0 #FFF;
+		-webkit-text-shadow: 0px -1px 0 #FFF;
+		-moz-text-shadow: 0px -1px 0 #FFF;
+		-ms-text-shadow: 0px -1px 0 #FFF;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }

@@ -11,6 +11,8 @@ function rocaInit() {
     }
 
     justifyGalleries();
+
+    //window.scrollTo(0, $(".navbar").position().top); // Scroll directly to main navbar
 }
 
 /*
