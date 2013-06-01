@@ -40,6 +40,7 @@ Author: jason
     padding: 0 !important; }
 
   .nav-collapse.in.collapse input.search-query {
+    margin-top: 15px !important;
     width: 50%; } }
 /*
 	Fix form wrapping issue of drop down menu
@@ -110,13 +111,15 @@ img {
     .navbar .navbar-inner .nav-collapse.in.collapse li a:hover:after {
       content: "\2190";
       margin-left: 10px; }
-    .navbar .navbar-inner .nav-collapse.in.collapse .dropdown ul.dropdown-menu a {
-      font-weight: normal; }
-    .navbar .navbar-inner .nav-collapse.in.collapse .dropdown ul.dropdown-menu a:hover {
-      font-weight: normal;
-      color: #fff; }
-    .navbar .navbar-inner .nav-collapse.in.collapse .dropdown ul.dropdown-menu .active a {
-      font-weight: bold; }
+    .navbar .navbar-inner .nav-collapse.in.collapse .dropdown ul.dropdown-menu {
+      background: none; }
+      .navbar .navbar-inner .nav-collapse.in.collapse .dropdown ul.dropdown-menu a {
+        font-weight: normal; }
+      .navbar .navbar-inner .nav-collapse.in.collapse .dropdown ul.dropdown-menu a:hover {
+        font-weight: normal;
+        color: #fff; }
+      .navbar .navbar-inner .nav-collapse.in.collapse .dropdown ul.dropdown-menu .active a {
+        font-weight: bold; }
     .navbar .navbar-inner .nav-collapse li.dropdown a .caret {
       border-top-color: #9B9B9B; }
     .navbar .navbar-inner .nav-collapse li.dropdown ul.dropdown-menu {
@@ -460,6 +463,7 @@ footer {
   font-size: 13px;
   font-weight: bold;
   border-top: 1px solid #ebebeb;
+  border-bottom: 35px solid #585858;
   color: #BABABA; }
   footer a {
     color: #D2D2D2;
