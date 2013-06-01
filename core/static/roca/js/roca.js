@@ -88,4 +88,5 @@ function colorizeNavbar() {
 
     $(".navbar .navbar-inner").css('background', 'rgba(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ',' + ALPHA + ')');
     $(".navbar .navbar-inner").css('border-top', '1px solid rgba(' + rgb_light[0] + ',' + rgb_light[1] + ',' + rgb_light[2] + ',' + 0.8 + ')');
+    $(".navbar .navbar-inner").css('border-bottom', '1px solid rgba(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ',' + ALPHA / 2 + ')');
 }

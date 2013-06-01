@@ -46,6 +46,64 @@ Author: jason
 			margin-bottom: 25px;
 		}
 	}
+
+	.navbar {
+		margin: 0px;
+	}
+}
+
+
+@media(max-width: 980px) {
+
+	.navbar-inner {
+		padding: 0 !important;
+	}
+
+	.nav-collapse.in.collapse {
+		input.search-query {
+			width: 50%;
+		}
+	}
+}
+
+/*
+	Fix form wrapping issue of drop down menu
+*/
+@media only screen 
+and (max-width : 600px) {
+	.navbar-inner .navbar-search {
+		input.search-query {
+			margin-bottom: 10px !important;
+		}
+	}
+
+	.navbar-inner {
+		padding-left: 10px;
+		padding-right: 10px;
+
+		p.navbar-text {
+			clear: both;
+			padding: 0px 10px 0px 10px;
+		}
+
+		form.navbar-search {
+			margin: 0;
+			padding: 0 15px 0 5px;
+		}
+
+		.nav-collapse.in.collapse input.search-query {
+			width: 90%;
+			//left: -10px;
+		}
+	}
+
+	textarea.input-xlarge {
+		width: 100%;
+	}
+}
+
+body {
+	padding: 0px;
 }
 
 img {
@@ -62,6 +120,7 @@ img {
 
 	.navbar-inner {
 		border: none;
+		text-align: left;
 		box-shadow: none;
 		-moz-box-shadow: none;
 		-webkit-box-shadow: none;
@@ -73,6 +132,9 @@ img {
 		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000)";
 
+		.container {
+			width: 95%;
+		}
 
 		a.brand {
 			color: #E7E7E7;
@@ -85,20 +147,17 @@ img {
 			line-height: 1em;
 		}
 
-		p.tagline {
+		p.navbar-text {
 			font-style: normal;
 			font-size: 1em;
+			line-height: 40px;
+			width: 250px;
+			color: #D9D9D9;
+			display: block;
+			white-space: nowrap;
 		}
 
 		.nav-collapse {
-			li a {
-				color: #C5C5C5;
-				text-shadow: none;
-				-webkit-text-shadow: none;
-				-moz-text-shadow: none;
-				-ms-text-shadow: none;
-			}
-
 			&.in.collapse {
 				li a {
 					&:hover {
@@ -110,6 +169,27 @@ img {
 				}	
 			}
 
+			li.dropdown {
+				a .caret {
+					border-top-color: #9B9B9B;
+				}
+
+				ul.dropdown-menu {
+					li a {
+						text-align: left;
+						color: #A5A5A5;
+					}
+				}
+			}
+
+			li a {
+				color: #C5C5C5;
+				text-shadow: none;
+				-webkit-text-shadow: none;
+				-moz-text-shadow: none;
+				-ms-text-shadow: none;
+			}
+
 			.divider-vertical {
 				border-right: 1px solid rgb(200, 200, 200);
 				border-right: 1px solid rgba(200, 200, 200, 0.2);
@@ -117,7 +197,7 @@ img {
 				border-left: 1px solid rgba(80, 80, 80, 0.1);
 			}
 
-			.active a, .active a:hover {
+			.active a, .active a:hover, .active.open a:hover {
 				background: none;
 				box-shadow: none;
 				-webkit-box-shadow: none;
@@ -135,7 +215,7 @@ img {
 				color: #FFF;
 				padding: 2px 20px 2px 20px;
 				position: relative;
-				top: 4px;
+				top: 3px;
 				border-radius: 15px !important;
 			}
 
@@ -177,6 +257,7 @@ img {
 		.btn-navbar {
 			background: none;
 			color: #353535;
+			margin: 5px 0 5px;
 
 			span.icon-bar {
 				background: rgb(255,255,255);
@@ -195,28 +276,6 @@ img {
 			li :hover {
 				background: none;
 			}
-		}
-	}
-}
-
-/*
-	Fix form wrapping issue of drop down menu
-*/
-@media only screen 
-and (max-width : 600px) {
-	.navbar-inner .navbar-search {
-		input.search-query {
-			margin-bottom: 10px !important;
-		}
-	}
-
-	.navbar-inner {
-		padding-left: 10px;
-		padding-right: 10px;
-
-		p.tagline {
-			clear: both;
-			padding: 0px 10px 10px 10px;
 		}
 	}
 }
@@ -261,9 +320,9 @@ and (max-width : 600px) {
 	}
 
 	h6.author {
-		color: #B2B2B2;
+		color: #C6C6C6;
 		font-weight: normal;
-		margin: 3px 0 5px;
+		margin: -3px 0 0;
 		float: left;
 	}
 
@@ -281,13 +340,14 @@ and (max-width : 600px) {
 		color: #787878;
 		display: block;
 		position: relative;
-		margin: 50px 0 50px;
+		margin: 25px 0 50px;
 	}
 
 	.map-canvas {
 		width: 100% !important;
 		height: 175px !important;
 		border: 1px solid #DFDFDF;
+		margin: 15px 0 0 0;
 	}
 
 	.blog-list-detail {
@@ -479,11 +539,12 @@ a.editable-link {
 	font-style: normal;
 	background-color: #6AA6D7 !important;
 	color: white !important;
-	border: none;;
+	border: none;
 
-	font-size: .8em !important;
+	font-size: 12px !important;
 	font-weight: bold;
 	padding: 4px 8px 4px 8px !important;
+	position: absolute !important;
 
 	box-shadow: 0 0 0px 1px #C5C5C5 !important;
 	-webkit-box-shadow: 0 0 0px 1px #C5C5C5 !important;
@@ -510,7 +571,7 @@ form.editable-form {
 
 	label {
 		color: #9A9A9A !important;
-		font-size: 1.5em !important;
+		font-size: 24px !important;
 		font-weight: lighter !important;
 	}
 
@@ -522,7 +583,7 @@ form.editable-form {
 		-webkit-border-radius: 15px;
 		-moz-border-radius: 15px;
 
-		font-size: .8em;
+		font-size: 14px;
 		text-shadow: none;
 		font-weight: bold;
 	}
@@ -544,19 +605,20 @@ form.editable-form {
 }
 
 #editable-toolbar {
-	background-color: #252525 !important;
+	background-color: #6AA6D7 !important;
 	border: none !important;
-	box-shadow: 0px 0px 5px 1px #D7D7D7;
-	-webkit-box-shadow: 0px 0px 5px 1px #D7D7D7;
-	-moz-box-shadow: 0px 0px 5px 1px #D7D7D7;
+	box-shadow: 0px 0px 2px 1px #323232 !important;
+	-webkit-box-shadow: 0px 0px 2px 1px #323232 !important;
+	-moz-box-shadow: 0px 0px 2px 1px #323232 !important;
+	border-radius: 0 0 15px;
 
-	a.toolbar {
+	a {
 		font-style: normal !important;
 		font-weight: bold !important;
-		border: none;
-		font-size: 0.7em !important;
+		border: none !important;
 		padding: 10px !important;
 		color: #F1F1F1 !important;
 		line-height: 23px;
+		text-shadow: 0px -1px 1px #FFF !important;
 	}
 }

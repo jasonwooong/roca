@@ -35,7 +35,40 @@ Author: jason
     padding-left: 0px;
     padding-right: 15px; }
     .container-fluid .row-fluid .middle {
-      margin-bottom: 25px; } }
+      margin-bottom: 25px; }
+
+  .navbar {
+    margin: 0px; } }
+@media (max-width: 980px) {
+  .navbar-inner {
+    padding: 0 !important; }
+
+  .nav-collapse.in.collapse input.search-query {
+    width: 50%; } }
+/*
+	Fix form wrapping issue of drop down menu
+*/
+@media only screen and (max-width: 600px) {
+  .navbar-inner .navbar-search input.search-query {
+    margin-bottom: 10px !important; }
+
+  .navbar-inner {
+    padding-left: 10px;
+    padding-right: 10px; }
+    .navbar-inner p.navbar-text {
+      clear: both;
+      padding: 0px 10px 0px 10px; }
+    .navbar-inner form.navbar-search {
+      margin: 0;
+      padding: 0 15px 0 5px; }
+    .navbar-inner .nav-collapse.in.collapse input.search-query {
+      width: 90%; }
+
+  textarea.input-xlarge {
+    width: 100%; } }
+body {
+  padding: 0px; }
+
 img {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -48,6 +81,7 @@ img {
   margin-bottom: -20px; }
   .navbar .navbar-inner {
     border: none;
+    text-align: left;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -57,6 +91,8 @@ img {
     background-image: rgba(20, 20, 20, 0.5);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000)"; }
+    .navbar .navbar-inner .container {
+      width: 95%; }
     .navbar .navbar-inner a.brand {
       color: #E7E7E7;
       font-weight: bold;
@@ -66,24 +102,34 @@ img {
       -moz-text-shadow: none;
       -ms-text-shadow: none;
       line-height: 1em; }
-    .navbar .navbar-inner p.tagline {
+    .navbar .navbar-inner p.navbar-text {
       font-style: normal;
-      font-size: 1em; }
+      font-size: 1em;
+      line-height: 40px;
+      width: 250px;
+      color: #D9D9D9;
+      display: block;
+      white-space: nowrap; }
+    .navbar .navbar-inner .nav-collapse.in.collapse li a:hover:after {
+      content: "\2190";
+      margin-left: 10px; }
+    .navbar .navbar-inner .nav-collapse li.dropdown a .caret {
+      border-top-color: #9B9B9B; }
+    .navbar .navbar-inner .nav-collapse li.dropdown ul.dropdown-menu li a {
+      text-align: left;
+      color: #A5A5A5; }
     .navbar .navbar-inner .nav-collapse li a {
       color: #C5C5C5;
       text-shadow: none;
       -webkit-text-shadow: none;
       -moz-text-shadow: none;
       -ms-text-shadow: none; }
-    .navbar .navbar-inner .nav-collapse.in.collapse li a:hover:after {
-      content: "\2190";
-      margin-left: 10px; }
     .navbar .navbar-inner .nav-collapse .divider-vertical {
       border-right: 1px solid #c8c8c8;
       border-right: 1px solid rgba(200, 200, 200, 0.2);
       border-left: 1px solid #505050;
       border-left: 1px solid rgba(80, 80, 80, 0.1); }
-    .navbar .navbar-inner .nav-collapse .active a, .navbar .navbar-inner .nav-collapse .active a:hover {
+    .navbar .navbar-inner .nav-collapse .active a, .navbar .navbar-inner .nav-collapse .active a:hover, .navbar .navbar-inner .nav-collapse .active.open a:hover {
       background: none;
       box-shadow: none;
       -webkit-box-shadow: none;
@@ -97,7 +143,7 @@ img {
       color: #FFF;
       padding: 2px 20px 2px 20px;
       position: relative;
-      top: 4px;
+      top: 3px;
       border-radius: 15px !important; }
     .navbar .navbar-inner .navbar-search ::-webkit-input-placeholder {
       /* WebKit browsers */
@@ -128,7 +174,8 @@ img {
       font-weight: bold; }
     .navbar .navbar-inner .btn-navbar {
       background: none;
-      color: #353535; }
+      color: #353535;
+      margin: 5px 0 5px; }
       .navbar .navbar-inner .btn-navbar span.icon-bar {
         background: white;
         background: rgba(255, 255, 255, 0.3); }
@@ -140,19 +187,6 @@ img {
     .navbar .navbar-inner .nav-collapse li :hover {
       background: none; }
 
-/*
-	Fix form wrapping issue of drop down menu
-*/
-@media only screen and (max-width: 600px) {
-  .navbar-inner .navbar-search input.search-query {
-    margin-bottom: 10px !important; }
-
-  .navbar-inner {
-    padding-left: 10px;
-    padding-right: 10px; }
-    .navbar-inner p.tagline {
-      clear: both;
-      padding: 0px 10px 10px 10px; } }
 .image-header {
   padding: 0 !important;
   margin: 0 !important;
@@ -182,9 +216,9 @@ img {
     font-weight: normal;
     color: #878787; }
   .container-fluid h6.author {
-    color: #B2B2B2;
+    color: #C6C6C6;
     font-weight: normal;
-    margin: 3px 0 5px;
+    margin: -3px 0 0;
     float: left; }
   .container-fluid h2.title {
     margin: 0;
@@ -197,11 +231,12 @@ img {
     color: #787878;
     display: block;
     position: relative;
-    margin: 50px 0 50px; }
+    margin: 25px 0 50px; }
   .container-fluid .map-canvas {
     width: 100% !important;
     height: 175px !important;
-    border: 1px solid #dfdfdf; }
+    border: 1px solid #dfdfdf;
+    margin: 15px 0 0 0; }
   .container-fluid .blog-list-detail {
     border-bottom: none; }
   .container-fluid .row-fluid .middle {
@@ -329,9 +364,10 @@ a.editable-link {
   background-color: #6aa6d7 !important;
   color: white !important;
   border: none;
-  font-size: 0.8em !important;
+  font-size: 12px !important;
   font-weight: bold;
   padding: 4px 8px 4px 8px !important;
+  position: absolute !important;
   box-shadow: 0 0 0px 1px #c5c5c5 !important;
   -webkit-box-shadow: 0 0 0px 1px #c5c5c5 !important;
   -moz-box-shadow: 0 0 0px 1px #c5c5c5 !important;
@@ -351,7 +387,7 @@ form.editable-form {
   -moz-border-radius: 15px; }
   form.editable-form label {
     color: #9a9a9a !important;
-    font-size: 1.5em !important;
+    font-size: 24px !important;
     font-weight: lighter !important; }
   form.editable-form input.btn {
     background: #353535 !important;
@@ -360,7 +396,7 @@ form.editable-form {
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
-    font-size: .8em;
+    font-size: 14px;
     text-shadow: none;
     font-weight: bold; }
   form.editable-form input.datetimefield {
@@ -375,16 +411,17 @@ form.editable-form {
     -moz-border-radius: 15px; }
 
 #editable-toolbar {
-  background-color: #252525 !important;
+  background-color: #6aa6d7 !important;
   border: none !important;
-  box-shadow: 0px 0px 5px 1px #d7d7d7;
-  -webkit-box-shadow: 0px 0px 5px 1px #d7d7d7;
-  -moz-box-shadow: 0px 0px 5px 1px #d7d7d7; }
-  #editable-toolbar a.toolbar {
+  box-shadow: 0px 0px 2px 1px #323232 !important;
+  -webkit-box-shadow: 0px 0px 2px 1px #323232 !important;
+  -moz-box-shadow: 0px 0px 2px 1px #323232 !important;
+  border-radius: 0 0 15px; }
+  #editable-toolbar a {
     font-style: normal !important;
     font-weight: bold !important;
-    border: none;
-    font-size: 0.7em !important;
+    border: none !important;
     padding: 10px !important;
     color: #f1f1f1 !important;
-    line-height: 23px; }
+    line-height: 23px;
+    text-shadow: 0px -1px 1px white !important; }
