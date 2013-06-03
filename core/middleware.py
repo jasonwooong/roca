@@ -16,7 +16,6 @@ class HeaderPhotoMiddleware(object):
             if n == 0:
                 try:
                     default = PhotoHeader(title='', img=settings.DEFAULT_HEADER_PHOTO, href='/')
-                    print default.img
                     response.context_data['photo_header'] = default
                 except:
                     return response
