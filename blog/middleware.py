@@ -21,10 +21,11 @@ class MapPageMiddleware(object):
 
         for blog in blog_posts:
             data = {
-                'title':    blog.title,
-                'url':      blog.get_absolute_url(),
+                'title': blog.title,
+                'description': blog.description_from_content,
+                'url': blog.get_absolute_url(),
                 'latitude': blog.geo.latitude,
-                'longitude':blog.geo.longitude
+                'longitude': blog.geo.longitude
             }
             map_data.append(data)
 
