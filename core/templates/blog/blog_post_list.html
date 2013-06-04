@@ -164,7 +164,9 @@
     {% endspaceless %}
     <br>
     {% endif %}
-    <a href="{{ blog_post.get_absolute_url }}">{% trans "read more" %}</a>
+    <a href="{{ blog_post.get_absolute_url }}">{% trans "read more" %}</a>    
+    {% comment %}
+    {# Uncomment to enable comments link #}
     /
     {% if settings.COMMENTS_DISQUS_SHORTNAME %}
     <a href="{{ blog_post.get_absolute_url }}#disqus_thread"
@@ -176,6 +178,7 @@
         {% blocktrans count blog_post.comments_count as comments_count %}1 comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
     </a>
     {% endif %}
+    {% endcomment %}
 </p>
 
 {% endblock %}
