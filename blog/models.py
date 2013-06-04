@@ -6,9 +6,16 @@ from mezzanine.core.fields import FileField
 from mezzanine.core.models import Displayable, Ownable, RichText, Slugged
 from mezzanine.generic.fields import CommentsField, RatingField
 from mezzanine.utils.models import AdminThumbMixin, upload_to
+from mezzanine.pages.models import Page
 
 from geoposition.fields import GeopositionField
 from pygeocoder import Geocoder
+
+try:
+    from south.modelsinspector import add_introspection_rules
+    add_introspection_rules([], ["^geoposition\.fields\.GeopositionField"])
+except ImportError:
+    pass
 
 class BlogPost(Displayable, Ownable, RichText, AdminThumbMixin):
     """
@@ -94,3 +101,16 @@ class BlogCategory(Slugged):
     @models.permalink
     def get_absolute_url(self):
         return ("blog_post_list_category", (), {"category": self.slug})
+
+class Map(Page, RichText):
+    """
+    Map view used for compiling all locations into single
+    map canvas.  Each marker will represent a blog entry
+    that takes a user directly to the post.
+    """
+    
+    related_posts = models.ManyToManyField(BlogPost,
+                                 verbose_name=_("Related posts"), blank=True)
+
+    class Meta:
+        verbose_name = _("Map")

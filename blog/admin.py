@@ -4,10 +4,11 @@ from copy import deepcopy
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
-from roca.blog.models import BlogPost, BlogCategory
+from roca.blog.models import BlogPost, BlogCategory, Map
+
 from mezzanine.conf import settings
 from mezzanine.core.admin import DisplayableAdmin, OwnableAdmin
-
+from mezzanine.pages.admin import PageAdmin
 
 blogpost_fieldsets = deepcopy(DisplayableAdmin.fieldsets)
 blogpost_fieldsets[0][1]["fields"].insert(1, "categories")
@@ -59,3 +60,4 @@ class BlogCategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(BlogPost, BlogPostAdmin)
 admin.site.register(BlogCategory, BlogCategoryAdmin)
+admin.site.register(Map, PageAdmin)
