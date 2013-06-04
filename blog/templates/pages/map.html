@@ -24,7 +24,7 @@ $(document).ready(function() {
   var bounds = new google.maps.LatLngBounds();
 
   {% for data in map_data %}
-    var latlng = new google.maps.LatLng({{ data.latitude | escapejs }} , {{ data.longitude | escapejs }});
+    var latlng = new google.maps.LatLng({{ data.latitude | safe }} , {{ data.longitude | safe }});
       var marker = new google.maps.Marker({
           position: latlng,
           map: map,
