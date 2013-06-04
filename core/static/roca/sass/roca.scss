@@ -383,12 +383,18 @@ img {
 		height: 175px !important;
 		border: 1px solid #DFDFDF;
 		margin: 0 0 10px 0;
+		img {
+			max-width: inherit;
+		}
 	}
 
 	.map.large {
 		border: 1px solid #DFDFDF;
 		width: 100% !important;
 		height: 500px !important;
+		img {
+			max-width: inherit;
+		}
 	}
 
 	p.blog-list-detail {
