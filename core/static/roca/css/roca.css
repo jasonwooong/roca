@@ -258,6 +258,10 @@ img {
     height: 175px !important;
     border: 1px solid #dfdfdf;
     margin: 0 0 10px 0; }
+  .container-fluid .map.large {
+    border: 1px solid #dfdfdf;
+    width: 100% !important;
+    height: 500px !important; }
   .container-fluid p.blog-list-detail {
     text-align: right;
     font-size: .9em;

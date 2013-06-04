@@ -376,11 +376,19 @@ img {
 		}
 	}
 
+	// Refactor map styling
+
 	.map-canvas {
 		width: 100% !important;
 		height: 175px !important;
 		border: 1px solid #DFDFDF;
 		margin: 0 0 10px 0;
+	}
+
+	.map.large {
+		border: 1px solid #DFDFDF;
+		width: 100% !important;
+		height: 500px !important;
 	}
 
 	p.blog-list-detail {
@@ -688,3 +696,4 @@ footer {
 		}
 	}
 }
+
