@@ -125,15 +125,15 @@
     {{ author }}
     {# <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a> #}
     {% endwith %}
-    {% if blog_post.category_list %}
-    {% trans "in" %}
-    {% for category in blog_post.category_list %}
-    <a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
-    {% endfor %}
-    {% endif %}
     {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
     {% if blog_post.show_location %}
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
+    {% endif %}
+    {% if blog_post.category_list %}
+    &mdash;
+    {% for category in blog_post.category_list %}
+    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
+    {% endfor %}
     {% endif %}
 </h6>
 {% endeditable %}

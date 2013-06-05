@@ -351,7 +351,7 @@ img {
 	h6.author {
 		color: #C6C6C6;
 		font-weight: normal;
-		margin: -3px 0 0;
+		margin: 0 0 0;
 		float: left;
 	}
 
@@ -411,6 +411,18 @@ img {
 			-webkit-text-shadow: 0px -1px 0 #FFF;
 			-moz-text-shadow: 0px -1px 0 #FFF;
 			-ms-text-shadow: 0px -1px 0 #FFF;
+		}
+	}
+
+	a.category {
+		color: #D1D1D1;
+		font-style: italic;
+		&:after {
+			content: ",";
+		}
+
+		&.last:after {
+			content: none;
 		}
 	}
 
