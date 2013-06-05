@@ -6,7 +6,7 @@ register_setting(
     name="TEMPLATE_ACCESSIBLE_SETTINGS",
     description=_("Sequence of setting names available within templates."),
     editable=False,
-    default=("COLORIZE_NAVBAR", "DEFAULT_HEADER_PHOTO", "ENABLE_PARALLAX"),
+    default=("COLORIZE_NAVBAR", "DEFAULT_HEADER_PHOTO", "ENABLE_PARALLAX", "GOOGLE_ANALYTICS_KEY"),
     append=True,
 )
 
