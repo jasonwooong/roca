@@ -111,6 +111,8 @@ class Map(Page, RichText):
     
     related_posts = models.ManyToManyField(BlogPost,
                                  verbose_name=_("Related posts"), blank=True)
+    related_categories = models.ManyToManyField(BlogCategory,
+                                 verbose_name=_("Related categories"), blank=True)
 
     class Meta:
         verbose_name = _("Map")
