@@ -98,10 +98,10 @@
 <div id="map-{{ blog_post.pk }}" class="map-canvas" style="height: 200px; width: 200px;"> </div>
 <script>
     $(document).ready(function() {
-        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude }}, {{ blog_post.geo.longitude }});
+        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude | safe }}, {{ blog_post.geo.longitude | safe }});
         var mapOptions = {
           center: latlng,
-          zoom: 8,
+          zoom: 14,
           scrollwheel: false,
           mapTypeControl: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP
