@@ -28,7 +28,7 @@
         var latlng = new google.maps.LatLng({{ blog_post.geo.latitude | safe }}, {{ blog_post.geo.longitude | safe }});
         var mapOptions = {
           center: latlng,
-          zoom: 10,
+          {% if blog_post.map_zoom %} zoom: {{ blog_post.map_zoom | safe }}, {% else %} zoom: 10, {% endif %}
           scrollwheel: false,
           mapTypeControl: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP

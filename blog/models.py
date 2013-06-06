@@ -42,6 +42,7 @@ class BlogPost(Displayable, Ownable, RichText, AdminThumbMixin):
                                          default=False)
     show_map = models.BooleanField(verbose_name=_("Show map in post"),
                                          default=False)
+    map_zoom = models.IntegerField(null=True, blank=True, default=0, help_text="Set zoom level for map (between 0 - 21)")
 
     class Meta:
         verbose_name = _("Blog post")
