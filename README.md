@@ -6,23 +6,21 @@
 ## Overview
 -----------
 Roca is an addon to [Mezzanine](https://github.com/stephenmcd/mezzanine), a
-Django based content management system (CMS).  Some of the key features
-of Roca are:
+Django based content management system.  Some of the key features of Roca are:
 
-* Minimalistic style
-* Designed for showcasing photography and images
-* Posts can contain location data for display on a map view
+* Minimalistic design with a focus on photography and images
+* Location data can be added to blog posts
 * Bootstrap responsive for optimal viewing amongst various devices
 
 ## Installation
 ----------------
 
-Download the **roca** source and place it in your Mezzanine project folder:
+Download the source package and place it in your Mezzanine project folder:
 
     __init__.py
     deploy/
     requirements/
-    roca/ <--
+    roca/
     fabfile.py
     local_settings.py
     manage.py
@@ -30,7 +28,7 @@ Download the **roca** source and place it in your Mezzanine project folder:
     urls.py
     wsgi.py
 
-Add the `roca.core` app into `INSTALLED_APPS` list in `settings.py`.  Ensure
+Add the `roca.core` app into the `INSTALLED_APPS` list in `settings.py`.  Ensure
 that it is added above any **Mezzanine** installed apps:
 
 	INSTALLED_APPS =(
@@ -66,7 +64,7 @@ update the database or use South to migrate the newly installed apps.
 
 Roca implements a *pseudo-random* design element through the top header photo
 and navigation bar. By adding more **Photo Headers**, Roca will automatically 
-select one at random at each page visit for a dynamic look and feel.  In 
+select one at random on each page visit for a dynamic look and feel.  In 
 addition to this the navigation bar is colorized at random. Both of these can
 be configured through the `Admin` page.
 
