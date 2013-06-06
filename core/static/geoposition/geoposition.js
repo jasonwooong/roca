@@ -98,7 +98,25 @@ if (jQuery != undefined) {
                     }
                 });
             });
+
             google.maps.event.trigger(marker, 'dragend');
+            
+            // Events for adding zoom persistence by saving zoom level
+            // value to model field "map_zoom"
+            if($("#id_map_zoom")) {
+                google.maps.event.addListener(map, "zoom_changed", function() {
+                    $("#id_map_zoom").val(map.getZoom());
+                });
+                $("#id_map_zoom").change(function() {
+                    try {
+                        var zoom = $(this).val();
+                        map.setZoom(parseInt(zoom));
+                    } catch(e) {
+                        // Don't attempt to change zoom
+                    }
+                });
+                $("#id_map_zoom").trigger("change");
+            }
         });
         
     };
