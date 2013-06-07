@@ -35,7 +35,7 @@ that it is added above any **Mezzanine** installed apps:
 		...
     	"django.contrib.sitemaps",
     	"django.contrib.staticfiles",
-    	"roca.core",  #<-- Insert here
+    	"roca.core",  					#<-- Insert here
     	"mezzanine.boot",
     	"mezzanine.conf",
     	...
@@ -49,7 +49,8 @@ to `INSTALLED_APPS` **in addition** to commenting out the default
     	"django.contrib.sitemaps",
     	"django.contrib.staticfiles",
     	"roca.core",
-    	"roca.blog", #<-- Insert here
+    	"roca.blog", 					#<-- Insert here
+ 	   	"roca.blog.geoposition", 		#<-- Insert here
     	"mezzanine.boot",
     	"mezzanine.conf",    	
     	...
