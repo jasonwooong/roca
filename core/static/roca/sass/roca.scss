@@ -371,6 +371,10 @@ img {
 		display: block;
 		position: relative;
 		margin: 35px 0 0px;
+
+		ul, ol {
+			margin: 0 0 0 3em;
+		}
 	}
 
 	// Refactor map styling
