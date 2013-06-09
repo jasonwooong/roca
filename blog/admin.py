@@ -39,6 +39,8 @@ class BlogPostAdmin(DisplayableAdmin, OwnableAdmin):
         OwnableAdmin.save_form(self, request, form, change)
         return DisplayableAdmin.save_form(self, request, form, change)
 
+class MapAdmin(PageAdmin):
+    filter_horizontal = ("related_categories", "related_posts",)
 
 class BlogCategoryAdmin(admin.ModelAdmin):
     """
@@ -60,4 +62,4 @@ class BlogCategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(BlogPost, BlogPostAdmin)
 admin.site.register(BlogCategory, BlogCategoryAdmin)
-admin.site.register(Map, PageAdmin)
+admin.site.register(Map, MapAdmin)
