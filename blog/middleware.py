@@ -1,3 +1,4 @@
+from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
 from roca.blog.models import BlogPost
 
 class MapPageMiddleware(object):
@@ -16,7 +17,7 @@ class MapPageMiddleware(object):
         if MAP_TEMPLATE not in template:
             return response
 
-        blog_posts = BlogPost.objects.all()
+        blog_posts = BlogPost.objects.filter(status=CONTENT_STATUS_PUBLISHED, show_map=True)
         map_data = []
 
         for blog in blog_posts:
