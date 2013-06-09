@@ -42,33 +42,31 @@ function enableParallax() {
 }
 
 /*
-    Use miromannino's JS justify gallery library to properly align photos. 
-    All HTML items classed as "img-justify" will be justified.
+    Use miromannino's JS justify gallery library to properly align photos.
 
-    Example:
+    TinyMCE Usage:
 
-        <div id="img-justify" >
-          <a href="myimage1.jpg" title="Title 1">
-            <img alt="Title 1" src="myimage1_m.jpg"/>
-          </a>
-          <a href="myimage2.jpg" title="Title 2">
-            <img alt="Title 2" src="myimage2_m.jpg"/>
-          </a>
-          <!-- other images... -->
-        </div>
+    To turn a collection of images to a justified gallery simply insert them
+    into a 1 x 1 table (one row, one column) and set its class to "gallery".
 
     Visit the following for more information:
-
     http://miromannino.it/projects/justified-gallery/
 */
 function justifyGalleries() {
     if ($(this).justifiedGallery) {
-        if (!$(".img-justify").length) {
-            console.warn('Unable to find galleries to justify.  Have you specified class="img-justify" on the gallery?');
+        if (!$("table.gallery").length) {
             return;
         }
-        $(".img-justify").each(function(i) {
-            $(this).justifiedGallery({'captions': false});
+        // Replace table with a wrapper and then justify galleries
+        $("table.gallery").each(function(i) {
+            var gallery = $('td:first', this);
+            gallery.wrap('<div class="container"></div>');
+            gallery.contents().unwrap();
+
+            var container = $('.container', this);
+            container.insertBefore($(this));
+            container.justifiedGallery({'captions': false});
+            $(this).remove();
         });
     }
 }
