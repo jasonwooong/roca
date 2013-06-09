@@ -11,6 +11,7 @@ function rocaInit() {
     }
 
     justifyGalleries();
+    $(".content").fitVids();
 }
 
 /*

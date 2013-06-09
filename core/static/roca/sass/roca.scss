@@ -375,6 +375,12 @@ img {
 		ul, ol {
 			margin: 1em 3em 1em 3em;
 		}
+
+		.fluid-width-video-wrapper {
+			iframe {
+				border: none;
+			}
+		}
 	}
 
 	// Refactor map styling
