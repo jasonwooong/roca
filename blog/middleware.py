@@ -3,6 +3,21 @@ from roca.blog.models import BlogPost
 
 class MapPageMiddleware(object):
 
+    def related_posts(self, page):
+        """
+        If related posts / categories are set then combine and 
+        return all relevant posts.  Otherwise, return all posts.
+        """
+        posts = []
+
+        if page.related_posts.count() or page.related_categories.count():
+            rel_by_posts = page.related_posts.all()
+            rel_by_cats = BlogPost.objects.filter(categories__in=page.related_categories.all())
+            return (rel_by_posts | rel_by_cats).filter(status=CONTENT_STATUS_PUBLISHED, show_map=True)
+        else:
+            return BlogPost.objects.filter(status=CONTENT_STATUS_PUBLISHED, show_map=True)
+        return posts
+
     def process_template_response(self, request, response):
         """
         Insert map data context into response if viewing map
@@ -17,7 +32,7 @@ class MapPageMiddleware(object):
         if MAP_TEMPLATE not in template:
             return response
 
-        blog_posts = BlogPost.objects.filter(status=CONTENT_STATUS_PUBLISHED, show_map=True)
+        blog_posts = self.related_posts(response.context_data['page'])
         map_data = []
 
         for blog in blog_posts:
