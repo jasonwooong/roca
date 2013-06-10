@@ -69,6 +69,36 @@ select one at random on each page visit for a dynamic look and feel.  In
 addition to this the navigation bar is colorized at random. Both of these can
 be configured through the `Admin` page.
 
+### Justified Gallery
+
+A [modified](https://github.com/jasonwooong/Justified-Gallery) version of 
+[Miro Mannino's](https://github.com/miromannino) Justified Gallery jQuery 
+plugin is used to properly display photos embedded into rich-text fields. To
+specify a group of photos while using the built in TinyMCE rich-text editor
+simply place them inside a `<table>` sized with **one row and one column**.
+The `<table>` element must contain the following class definitions in order
+to be viewed as a justified gallery:  
+
+* `gallery`:
+	* **Required** to set group of photos as justified gallery
+* `captions`:
+	* Displays captions when mouse is placed over photo
+* `labels`:
+	* Makes caption labels always-on
+
+**Images must also be a clickable link in order for Justify Gallery to work**
+
+Example HTML (TinyMCE Supported):
+
+	<table class="gallery captions">
+		<a title="Sample description" href="#">
+			<img src="sample.jpg" alt="Sample caption">
+		</a>
+		<a title="Sample description" href="#">
+			<img src="sample.jpg" alt="Sample caption">
+		</a>
+	</table>
+
 ## Screenshots
 --------------
 
