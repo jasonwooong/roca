@@ -54,6 +54,10 @@ function enableParallax() {
 */
 function justifyGalleries() {
     if ($(this).justifiedGallery) {
+        var options = {
+            'captions': false
+        };
+
         if (!$("table.gallery").length) {
             return;
         }
@@ -65,7 +69,15 @@ function justifyGalleries() {
 
             var container = $('.container', this);
             container.insertBefore($(this));
-            container.justifiedGallery({'captions': false});
+
+            if($(this).hasClass('captions'))
+                options['captions'] = true;
+            if($(this).hasClass('labels')) {
+                options['captions'] = true;
+                options['labels'] = true;
+            }
+            
+            container.justifiedGallery(options);
             $(this).remove();
         });
     }
