@@ -6,7 +6,7 @@ register_setting(
     name="TEMPLATE_ACCESSIBLE_SETTINGS",
     description=_("Sequence of setting names available within templates."),
     editable=False,
-    default=("COLORIZE_NAVBAR", "DEFAULT_HEADER_PHOTO", "ENABLE_PARALLAX", "GOOGLE_ANALYTICS_KEY"),
+    default=("COLOR_SPLASH", "DEFAULT_HEADER_PHOTO", "ENABLE_PARALLAX", "GOOGLE_ANALYTICS_KEY"),
     append=True,
 )
 
@@ -27,9 +27,9 @@ register_setting(
 )
 
 register_setting(
-    name="COLORIZE_NAVBAR",
-    label=_("Colorize top navigation bar"),
-    description=_("Enable this setting to randomly colorize top navigation bar. (IE 9 and higher)"),
+    name="COLOR_SPLASH",
+    label=_("Randomly colorize navigation bar and blog post headers"),
+    description=_("Enable this setting to randomly colorize top navigation bar and blog post links. (IE 9 and higher)"),
     editable=True,
     default=True,
 )
