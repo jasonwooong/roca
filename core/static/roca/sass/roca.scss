@@ -146,6 +146,7 @@ img {
 	position: relative;
 	z-index: 1;
 	margin-bottom: -20px;
+	font-weight: normal;
 
 	.navbar-inner {
 		border: none;
@@ -387,8 +388,8 @@ img {
 
 	h1.title, h2.title {
 		margin: 0;
-		font-size: 2.0em;
-		font-weight: 100;
+		font-size: 1.8em;
+		font-weight: normal;
 		a {
 			color: red;
 			font-weight: lighter;
@@ -468,12 +469,6 @@ img {
 
 	.row-fluid .middle {
 		padding-left: 20px;
-
-		h1.title {
-			color: #565656;
-			font-size: 2em;
-			margin-bottom: 0px;
-		}
 
 		#comments {
 			font-size: .9em;
