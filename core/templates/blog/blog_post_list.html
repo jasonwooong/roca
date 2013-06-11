@@ -93,11 +93,6 @@
 {% endeditable %}
 {% endblock %}
 {% block blog_post_list_post_metainfo %}
-
-{% if blog_post.show_map %}
-{% include "blog/includes/map_leaderboard.html" %}
-{% endif %}
-
 {% editable blog_post.publish_date %}
 <h6 class="author">
     {% trans "Posted by" %}
@@ -118,6 +113,10 @@
 </h6>
 {% endeditable %}
 {% endblock %}
+
+{% if blog_post.show_map %}
+{% include "blog/includes/map_leaderboard.html" %}
+{% endif %}
 
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
 {% block blog_post_list_post_featured_image %}
