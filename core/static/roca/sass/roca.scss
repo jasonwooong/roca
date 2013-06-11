@@ -39,7 +39,21 @@ Author: jason
 		padding-right: 0px;
 
 		.row-fluid .middle {
-			padding: 10px !important;
+			padding: 0px !important;
+
+			.blog-post {
+				.map {
+					border-left: none;
+					border-right: none;
+					height: 250px;
+				}
+				.content {
+					padding: 0 10px 0 10px;
+				}
+				.blog-list-detail {
+					padding: 0 15px;
+				}
+			}
 		}
 	}
 
