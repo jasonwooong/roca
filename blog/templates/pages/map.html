@@ -4,81 +4,9 @@
 
 {% block main %}
 
-<script>
-
-/*
-  Generate info window from marker data.  Marker will contain additional
-  information provided by map page middleware:
-  
-  description
-  url
-
-*/
-function markerContent(marker) {
-
-  var content = "";
-  content += "<a href=\"" + marker.url + "\">" + "<b>" + marker.title + "</b></a>";
-  content += marker.description;
-
-  return content;
-}
-
-$(document).ready(function() {
-  // Setup map options
-  var mapOptions = {
-    zoom: 10,
-    scrollwheel: false,
-    mapTypeControl: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
-  // Append mobile specific options
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
-      mapOptions['draggable'] = false; 
-  var map = new google.maps.Map(document.getElementById("map"),
-      mapOptions);
-
-  // For automatically fitting zoom level to all markers
-  var bounds = new google.maps.LatLngBounds();
-  var markers = [];
-
-  {% for data in map_data %}
-      markers.push(new google.maps.Marker({
-        position: new google.maps.LatLng({{ data.latitude | safe }} , {{ data.longitude | safe }}),
-        map: map,
-        title: "{{ data.title | safe }}",
-        description: "{{ data.description | safe }}",
-        url: "{{ data.url }}"
-      }));
-        
-  {% endfor %}
-
-  var infowindow = new google.maps.InfoWindow({
-      content: ""
-  });
-
-  for(var m in markers) {
-      var marker = markers[m];
-      bounds.extend(marker.getPosition());
-      var content = markerContent(marker);
-      google.maps.event.addListener(marker, 'click', (function(marker, content) {
-          return function() {
-              infowindow.setContent(content);
-              infowindow.open(map, marker);
-          }
-      })(marker, content));
-  }
-
-  map.fitBounds(bounds);
-  
-});   
-</script>
-
 {% editable page.map.content %}
 {{ page.map.content|richtext_filter|safe }}
 {% endeditable %}
-
-<div id="map" class="map large"></div>
-
+{% include "blog/includes/map_large.html" %}
 {% endblock %}
 
