@@ -13,20 +13,20 @@ Author: jason
 	}
 
 	h1.title {
-		text-align: left;
-		font-size: 1.5em;
+		text-align: center;
+		font-size: 1.8em;
 	}
 
 	h6.author {
-		text-align: left;
+		text-align: center;
 		width: 100%;
 		display: block;
 		padding-bottom: 10px;
 	}
 
 	h2.title {
-		font-size: 1.4em !important;
-		text-align: left;
+		font-size: 1.8em !important;
+		text-align: center;
 	}
 
 	.blog-post {
@@ -34,11 +34,12 @@ Author: jason
 	}
 
 	.container-fluid {
+		margin: 0px;
 		padding-left: 0px;
-		padding-right: 15px;
+		padding-right: 0px;
 
 		.row-fluid .middle {
-			margin-bottom: 25px;
+			padding: 10px !important;
 		}
 	}
 
@@ -337,7 +338,7 @@ img {
 
 .blog-post {
 	border-top: 1px dotted #D5D5D5;
-	padding-top: 15px;
+	padding-top: 0px;
 
 	&.first {
 		border-top: none;
