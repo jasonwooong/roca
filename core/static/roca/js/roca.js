@@ -99,13 +99,14 @@ function colorize() {
 
     var ALPHA = 0.75;
     var options = {
-        darken: 0.30,
+        darken: 0.60,
     };
     var randomRGB = this.randomRGB(options);
 
     $(".navbar .navbar-inner").css('background', 'rgba(' + randomRGB['rgb'][0] + ',' + randomRGB['rgb'][1] + ',' + randomRGB['rgb'][2] + ',' + ALPHA + ')');
     $(".navbar .navbar-inner").css('border-top', '1px solid rgba(' + randomRGB['rgb_light'][0] + ',' + randomRGB['rgb_light'][1] + ',' + randomRGB['rgb_light'][2] + ',' + 0.8 + ')');
     $(".navbar .navbar-inner").css('border-bottom', '1px solid rgba(' + randomRGB['rgb'][0] + ',' + randomRGB['rgb'][1] + ',' + randomRGB['rgb'][2] + ',' + ALPHA / 2 + ')');
+    $("footer").css('border-bottom-color', 'rgb(' + randomRGB['rgb'][0] + ',' + randomRGB['rgb'][1] + ',' + randomRGB['rgb'][2] + ')');
 
     var that = this
     $('.blog-post').each(function() {
