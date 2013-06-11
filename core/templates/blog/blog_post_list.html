@@ -87,14 +87,14 @@
 
 {% block blog_post_list_post_title %}
 {% editable blog_post.title %}
-<h2 class="title">
+<h2 class="title blog">
     <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
 </h2>
 {% endeditable %}
 {% endblock %}
 {% block blog_post_list_post_metainfo %}
 {% editable blog_post.publish_date %}
-<h6 class="author">
+<h6 class="author blog">
     {% trans "Posted by" %}
     {% with blog_post.user as author %}
     {{ author }}

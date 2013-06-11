@@ -13,10 +13,10 @@ Author: jason
 	}
 
 	h1, h2 {
-		&.title {
+		padding: 0px 5px 0px 10px;
+		&.title.blog {
 			text-align: left;
 			font-size: 1.8em;
-			padding: 0px 5px 0px 10px;
 			border-left: 10px solid;
 			border-top: 1px solid;
 			border-color: #e5e5e5;
@@ -24,16 +24,19 @@ Author: jason
 	}
 
 	h6.author {
-		text-align: left;
 		padding: 2px 0 10px 12px !important;
-		border-left: 10px solid;
-		border-bottom: 1px solid;
-		border-color: #e5e5e5;
-		margin: 0px !important;
-		display: block !important;
-	    width: -moz-calc(100% - 22px);
-	    width: -webkit-calc(100% - 22px);
-	    width: calc(100% - 22px);
+		&.blog{
+			text-align: left;
+			padding: 2px 0 10px 12px;
+			border-left: 10px solid;
+			border-bottom: 1px solid;
+			border-color: #e5e5e5;
+			margin: 0px !important;
+			display: block !important;
+		    width: -moz-calc(100% - 22px);
+		    width: -webkit-calc(100% - 22px);
+		    width: calc(100% - 22px);
+		}
 	}
 
 	.map.leaderboard {
@@ -52,17 +55,26 @@ Author: jason
 		.row-fluid .middle {
 			padding: 0px !important;
 
-			.content {
-				padding: 0 10px 0 10px;
+			p {
+				padding: 10px;
 			}
 
-			.map.leaderboard {
-				border-left: none;
-				border-right: none;
-				margin-bottom: 0px;
+			h4 {
+				padding: 0 10px 0 10px;
+				font-weight: normal;
+			}
+
+			.map {
 				margin-left: -2px !important;
-				border-color: #efefef;
-				height: 250px;
+
+				&.leaderboard {
+					border-left: none;
+					border-right: none;
+					margin-bottom: 0px;
+					border-color: #efefef;
+					height: 250px;
+				}
+				
 			}
 			.blog-list-detail {
 				padding: 0 15px;

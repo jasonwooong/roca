@@ -11,19 +11,19 @@
 {{ blog_post.description }}
 {% endmetablock %}{% endblock %}
 
-<div class="blog-post">
-
 {% block title %}
 {% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}
 {% endblock %}
 
 {% block breadcrumb_menu %}
 {{ block.super }}
+
 <li class="active">{{ blog_post.title }}</li>
 {% endblock %}
 
 {% block main %}
 {% block blog_post_detail_postedby %}
+
 {% editable blog_post.publish_date %}
 <h6 class="author">
     {% trans "Posted by" %}
@@ -133,5 +133,3 @@
 {% endblock %}
 
 {% endblock %}
-
-</div>
