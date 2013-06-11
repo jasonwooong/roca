@@ -56,21 +56,19 @@ Author: jason
 				padding: 0 10px 0 10px;
 			}
 
-			.blog-post {
-				.map.leaderboard {
-					border-left: none;
-					border-right: none;
-					margin-bottom: 0px;
-					height: 250px;
-					border-color: #efefef;
-				}
-				.blog-list-detail {
-					padding: 0 15px;
-				}
+			.map.leaderboard {
+				border-left: none;
+				border-right: none;
+				margin-bottom: 0px;
+				margin-left: -2px !important;
+				border-color: #efefef;
+			}
+			.blog-list-detail {
+				padding: 0 15px;
 			}
 
 			.pager {
-				padding: 0 0 0 10px;
+				padding: 0 10px 0 10px;
 			}
 
 			.pagination {
