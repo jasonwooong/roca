@@ -192,24 +192,25 @@ img {
 
 		a.brand {
 			color: #E7E7E7;
-			font-weight: bold;
+			font-weight: normal;
 			font-size: 1.3em;
 			text-shadow: none;
 			-webkit-text-shadow: none;
 			-moz-text-shadow: none;
 			-ms-text-shadow: none;
-			line-height: 1em;
+			line-height: 18px;
 		}
 
 		p.navbar-text {
 			font-style: normal;
-			font-size: 1em;
+			font-size: 0.9em;
 			line-height: 40px;
 			overflow: visible;
 			width: 100px;
 			color: #fff;
 			display: block;
 			white-space: nowrap;
+			line-height: 40px;
 		}
 
 		.nav-collapse {
