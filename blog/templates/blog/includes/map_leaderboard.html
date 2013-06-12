@@ -14,8 +14,10 @@ $(document).ready(function() {
       styles: styles,
     };
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         mapOptions['draggable'] = false; 
+        mapOptions['zoomControl'] = false; 
+    }
 
     var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
         mapOptions);
