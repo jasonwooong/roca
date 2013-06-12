@@ -99,7 +99,7 @@ function colorize() {
 
     var ALPHA = 0.75;
     var options = {
-        darken: 0.60,
+        darken: 0.30,
     };
     var randomRGB = this.randomRGB(options);
 
@@ -111,7 +111,7 @@ function colorize() {
     var that = this
     $('.blog-post').each(function() {
         var options = {
-            brightness: 0.65,
+            brightness: 0.60,
         };
         var randomRGB = that.randomRGB(options);
         $('h2.title a', this).css('color', 'rgb(' + randomRGB['rgb'][0] + ',' + randomRGB['rgb'][1] + ',' + randomRGB['rgb'][2] + ')');
