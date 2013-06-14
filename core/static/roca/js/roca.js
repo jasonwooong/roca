@@ -60,7 +60,9 @@ function justifyGalleries() {
         // Replace table with a wrapper and then justify galleries
         $("table.gallery").each(function(i) {
             var options = {
-                'captions': false
+                'captions': false,
+                'rowHeight': 150,
+                'margins': 0,
             };
             var gallery = $('td:first', this);
             gallery.wrap('<div class="container"></div>');
@@ -75,7 +77,6 @@ function justifyGalleries() {
                 options['captions'] = true;
                 options['labels'] = true;
             }
-            console.log(options);
             container.justifiedGallery(options);
             $(this).remove();
         });
