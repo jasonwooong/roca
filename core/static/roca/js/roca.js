@@ -1,5 +1,4 @@
 function rocaInit() {
-    console.log(document.COLOR_SPLASH);
     if(document.COLOR_SPLASH) {
         colorize();
     } else {
@@ -55,15 +54,14 @@ function enableParallax() {
 */
 function justifyGalleries() {
     if ($(this).justifiedGallery) {
-        var options = {
-            'captions': false
-        };
-
         if (!$("table.gallery").length) {
             return;
         }
         // Replace table with a wrapper and then justify galleries
         $("table.gallery").each(function(i) {
+            var options = {
+                'captions': false
+            };
             var gallery = $('td:first', this);
             gallery.wrap('<div class="container"></div>');
             gallery.contents().unwrap();
@@ -77,7 +75,7 @@ function justifyGalleries() {
                 options['captions'] = true;
                 options['labels'] = true;
             }
-            
+            console.log(options);
             container.justifiedGallery(options);
             $(this).remove();
         });
@@ -146,7 +144,6 @@ function randomRGB(options) {
 
     var low = MAX * options['low'];
 
-    //console.log(r);
 
     var rgb = new Array(3); // base rgb color spec
     var rgb_light = new Array(3);  // lightened version of base color
@@ -158,7 +155,6 @@ function randomRGB(options) {
 
     var b = MAX * options['brightness'];
     var a = b / (rgb[0] * 0.299 + rgb[1] * 0.587 + rgb[2] * 0.114); // Apply weighted brightness multipliers
-    console.log("a: " + a);
 
     for(i = 0; i < rgb.length; i++) {
         rgb[i] *= a;
@@ -171,8 +167,8 @@ function randomRGB(options) {
         'rgb_light': rgb_light
     };
 
-    console.log('rgb' + random['rgb']);
-    console.log('brightness: ' + (0.299*random['rgb'][0] + 0.587*random['rgb'][1] + 0.114*random['rgb'][2]))
+    // Print perceived brightness value
+    //console.log('brightness: ' + (0.299*random['rgb'][0] + 0.587*random['rgb'][1] + 0.114*random['rgb'][2]))
 
     return random;
 }
