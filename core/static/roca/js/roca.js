@@ -108,7 +108,7 @@ function colorize() {
     $("footer").css('border-bottom-color', 'rgb(' + randomRGB['rgb'][0] + ',' + randomRGB['rgb'][1] + ',' + randomRGB['rgb'][2] + ')');
 
     var that = this
-    $('.blog-post').each(function() {
+    $('.blog-post').not(".first").each(function() {
         var options = {
             brightness: 0.60,
         };
