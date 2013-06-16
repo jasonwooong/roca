@@ -38,7 +38,7 @@ class MapPageMiddleware(object):
         for blog in blog_posts:
             data = {
                 'title': blog.title,
-                'description': blog.description_from_content,
+                'description': blog.description,
                 'url': blog.get_absolute_url(),
                 'latitude': blog.geo.latitude,
                 'longitude': blog.geo.longitude
