@@ -59,6 +59,25 @@ function justifyGalleries() {
         }
         // Replace table with a wrapper and then justify galleries
         $("table.gallery").each(function(i) {
+            // Build photo url from filename and lazily wrap images with respective <a> tag.
+            if(!$('a', this).length) {
+                $("img", this).each(function() {
+                    var $this = $(this);
+                    var src, filename, photo;
+                    src = $this.attr('src');
+
+                    var flickr = /^http:\/\/.*staticflickr\.com/;
+                    if(!flickr.test(src)) throw "Cannot justify gallery using " + src + ". Photo is not from valid Flickr source.";
+
+                    filename = src.substr(src.lastIndexOf("/") + 1);
+                    // Splice on first underbar to remove secret key, extension from photo id
+                    photo = filename.substr(0, filename.indexOf("_"));
+                    $this.wrap('<a title="' + $this.attr('alt') + 
+                        '" href="' + "http://flic.kr/p/" + base58.encode(parseInt(photo)) + 
+                        "/lightbox" + '"></a>');
+                })
+            }
+
             var options = {
                 'captions': false,
                 'rowHeight': 150,
@@ -173,3 +192,39 @@ function randomRGB(options) {
 
     return random;
 }
+
+/*
+ Base 58 implementation by inflammable:
+ https://gist.github.com/inflammable/2929362
+*/
+var base58 = (function(alpha) {
+    var alphabet = alpha || '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ',
+        base = alphabet.length;
+    return {
+        encode: function(enc) {
+            if(typeof enc!=='number' || enc !== parseInt(enc))
+                throw '"encode" only accepts integers.';
+            var encoded = '';
+            while(enc) {
+                var remainder = enc % base;
+                enc = Math.floor(enc / base);
+                encoded = alphabet[remainder].toString() + encoded;        
+            }
+            return encoded;
+        },
+        decode: function(dec) {
+            if(typeof dec!=='string')
+                throw '"decode" only accepts strings.';            
+            var decoded = 0;
+            while(dec) {
+                var alphabetPosition = alphabet.indexOf(dec[0]);
+                if (alphabetPosition < 0)
+                    throw '"decode" can\'t find "' + dec[0] + '" in the alphabet: "' + alphabet + '"';
+                var powerOf = dec.length - 1;
+                decoded += alphabetPosition * (Math.pow(base, powerOf));
+                dec = dec.substring(1);
+            }
+            return decoded;
+        }
+    };
+})();
