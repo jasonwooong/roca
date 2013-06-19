@@ -31,7 +31,7 @@ register_setting(
     label=_("Randomly colorize navigation bar and blog post headers"),
     description=_("Enable this setting to randomly colorize top navigation bar and blog post links. (IE 9 and higher)"),
     editable=True,
-    default=True,
+    default=False,
 )
 
 register_setting(
