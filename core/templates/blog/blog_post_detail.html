@@ -17,34 +17,13 @@
 
 {% block breadcrumb_menu %}
 {{ block.super }}
+
 <li class="active">{{ blog_post.title }}</li>
 {% endblock %}
 
 {% block main %}
-{% if blog_post.show_map %}
-<div id="map-{{ blog_post.pk }}" class="map-canvas" style="height: 200px; width: 200px;"> </div>
-<script>
-    $(document).ready(function() {
-        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude }}, {{ blog_post.geo.longitude }});
-        var mapOptions = {
-          center: latlng,
-          zoom: 10,
-          scrollwheel: false,
-          mapTypeControl: false,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
-            mapOptions['draggable'] = false; 
-        var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
-            mapOptions);
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-        });
-    });   
-</script>
-{% endif %}
 {% block blog_post_detail_postedby %}
+
 {% editable blog_post.publish_date %}
 <h6 class="author">
     {% trans "Posted by" %}
@@ -56,9 +35,19 @@
     {% if blog_post.show_location %}
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
     {% endif %}
+    {% if blog_post.category_list %}
+    &mdash;
+    {% for category in blog_post.category_list %}
+    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
+    {% endfor %}
+    {% endif %}
 {% endeditable %}
 {% endblock %}
 </h6>
+
+{% if blog_post.show_map %}
+{% include "blog/includes/map_leaderboard.html" %}
+{% endif %}
 
 {% block blog_post_detail_featured_image %}
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}

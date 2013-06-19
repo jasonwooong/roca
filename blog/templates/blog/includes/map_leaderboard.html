@@ -1,0 +1,34 @@
+<div id="map-{{ blog_post.pk }}" class="map leaderboard"> </div>
+<script>
+$(document).ready(function() {
+    {% include "blog/includes/map_styles.js" %}
+
+    var latlng = new google.maps.LatLng({{ blog_post.geo.latitude | safe }}, {{ blog_post.geo.longitude | safe }});
+    var mapOptions = {
+      center: latlng,
+      {% if blog_post.map_zoom %} zoom: {{ blog_post.map_zoom | safe }}, {% else %} zoom: 10, {% endif %}
+      scrollwheel: false,
+      mapTypeControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      streetViewControl: false,
+      styles: styles,
+    };
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+        mapOptions['draggable'] = false; 
+        mapOptions['zoomControl'] = false; 
+    }
+
+    var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
+        mapOptions);
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        var center = map.getCenter(); 
+        window.open('http://maps.google.com?' + 'll=' + center['jb'] + ',' + center['kb'], '_blank');
+      });
+});
+</script>

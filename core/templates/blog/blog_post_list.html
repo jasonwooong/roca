@@ -50,7 +50,7 @@
 
 {% if tag or category or year or month or author %}
     {% block blog_post_list_filterinfo %}
-    <p>
+    <p class="filter-info">
     {% if tag %}
         {% trans "Viewing posts tagged" %} {{ tag }}
     {% else %}{% if category %}
@@ -87,57 +87,36 @@
 
 {% block blog_post_list_post_title %}
 {% editable blog_post.title %}
-<h2 class="title">
+<h2 class="title blog">
     <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
 </h2>
 {% endeditable %}
 {% endblock %}
 {% block blog_post_list_post_metainfo %}
-
-{% if blog_post.show_map %}
-<div id="map-{{ blog_post.pk }}" class="map-canvas" style="height: 200px; width: 200px;"> </div>
-<script>
-    $(document).ready(function() {
-        var latlng = new google.maps.LatLng({{ blog_post.geo.latitude }}, {{ blog_post.geo.longitude }});
-        var mapOptions = {
-          center: latlng,
-          zoom: 8,
-          scrollwheel: false,
-          mapTypeControl: false,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
-            mapOptions['draggable'] = false; 
-        var map = new google.maps.Map(document.getElementById("map-{{ blog_post.pk }}"),
-            mapOptions);
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-        });
-    });   
-</script>
-{% endif %}
-
 {% editable blog_post.publish_date %}
-<h6 class="author">
+<h6 class="author blog">
     {% trans "Posted by" %}
     {% with blog_post.user as author %}
     {{ author }}
     {# <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a> #}
     {% endwith %}
-    {% if blog_post.category_list %}
-    {% trans "in" %}
-    {% for category in blog_post.category_list %}
-    <a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
-    {% endfor %}
-    {% endif %}
     {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
     {% if blog_post.show_location %}
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
     {% endif %}
+    {% if blog_post.category_list %}
+    &mdash;
+    {% for category in blog_post.category_list %}
+    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
+    {% endfor %}
+    {% endif %}
 </h6>
 {% endeditable %}
 {% endblock %}
+
+{% if blog_post.show_map %}
+{% include "blog/includes/map_leaderboard.html" %}
+{% endif %}
 
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
 {% block blog_post_list_post_featured_image %}

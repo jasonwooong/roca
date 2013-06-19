@@ -40,13 +40,30 @@
 <script src="{% static "js/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
 <script src="{% static "roca/js/jquery.justifiedgallery.min.js" %}"></script>
+<script src="{% static "roca/js/jquery.fitvids.js" %}"></script>
 <script src="{% static "roca/js/roca.js" %}"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-{% if settings.COLORIZE_NAVBAR %}
+{% if settings.GOOGLE_ANALYTICS_KEY %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ settings.GOOGLE_ANALYTICS_KEY }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endif %}
+
+{% if settings.COLOR_SPLASH %}
 <script>
 
-document.COLORIZE_NAVBAR = true;
+document.COLOR_SPLASH = true;
 
 </script>
 {% endif %}
@@ -107,7 +124,7 @@ $(document).ready(function () {
     </a>
     {% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
     {% if settings.SITE_TAGLINE %}<p class="navbar-text">{{ settings.SITE_TAGLINE }}</p>{% endif %}
-    <div class="nav-collapse">
+    <div class="nav-collapse collapse">
         {% search_form "all" %}
         {% page_menu "pages/menus/dropdown.html" %}
     </div>

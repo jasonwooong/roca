@@ -12,33 +12,97 @@ Author: jason
 		padding-left:0;
 	}
 
-	h1.title {
-		text-align: left;
-		font-size: 1.5em;
+	h1, h2 {
+		padding: 0px 5px 0px 10px;
+		&.title.blog {
+			text-align: left;
+			font-size: 1.8em;
+			border-left: 10px solid;
+			border-top: 1px solid;
+			border-color: #e5e5e5;
+		}
 	}
 
 	h6.author {
-		text-align: left;
-		width: 100%;
-		display: block;
-		padding-bottom: 10px;
+		padding: 0px 0 10px 12px !important;
+		width: -moz-calc(100% - 22px);
+		    width: -webkit-calc(100% - 22px);
+		    width: calc(100% - 22px);
+		&.blog {
+			text-align: left;
+			padding: 2px 0 10px 12px;
+			border-left: 10px solid;
+			border-bottom: 1px solid;
+			border-color: #e5e5e5;
+			margin: 0px !important;
+			display: block !important;
+		}
 	}
 
-	h2.title {
-		font-size: 1.4em !important;
-		text-align: left;
+	.map.leaderboard {
+		border-top: none !important;
 	}
 
 	.blog-post {
 		border-top: none !important;
+
+		&.first {
+			margin-top: -21px;
+		}
 	}
 
 	.container-fluid {
+		margin: 0px;
 		padding-left: 0px;
-		padding-right: 15px;
+		padding-right: 0px;
 
 		.row-fluid .middle {
-			margin-bottom: 25px;
+			padding: 0px !important;
+			margin-top: -15px;
+
+			p {
+				padding: 0 10px 0 10px;
+			}
+
+			p.filter-info {
+				margin: 10px 10px 35px 10px;
+			}
+
+			h4 {
+				padding: 0 10px 0 10px;
+			}
+
+			.map {
+				margin-left: -2px !important;
+
+				&.leaderboard {
+					border-left: none;
+					border-right: none;
+					margin-bottom: 0px;
+					border-color: #efefef;
+					height: 250px;
+				}
+				
+			}
+			.blog-list-detail {
+				padding: 0 15px;
+			}
+
+			.content {
+				top: 10px;
+				margin-top: 0px;
+				ul {
+					margin: 10px 10px 10px 35px;
+				}
+			}
+
+			.pager {
+				padding: 0 10px 0 10px;
+			}
+
+			.pagination {
+				padding-left: 10px;
+			}
 		}
 	}
 
@@ -100,6 +164,11 @@ and (max-width : 600px) {
 
 body {
 	padding: 0px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;	
+	font-weight: 300;
+	color: rgb(85,85,85);
+	-webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -113,6 +182,7 @@ img {
 	position: relative;
 	z-index: 1;
 	margin-bottom: -20px;
+	font-weight: normal;
 
 	.navbar-inner {
 		border: none;
@@ -134,24 +204,25 @@ img {
 
 		a.brand {
 			color: #E7E7E7;
-			font-weight: bold;
+			font-weight: normal;
 			font-size: 1.3em;
 			text-shadow: none;
 			-webkit-text-shadow: none;
 			-moz-text-shadow: none;
 			-ms-text-shadow: none;
-			line-height: 1em;
+			line-height: 18px;
 		}
 
 		p.navbar-text {
 			font-style: normal;
-			font-size: 1em;
+			font-size: 0.9em;
 			line-height: 40px;
 			overflow: visible;
 			width: 100px;
-			color: #D9D9D9;
+			color: #fff;
 			display: block;
 			white-space: nowrap;
+			line-height: 40px;
 		}
 
 		.nav-collapse {
@@ -168,6 +239,7 @@ img {
 				.dropdown ul.dropdown-menu {
 					background: none;
 					a {
+						color: #eee;
 						font-weight: normal;
 					}
 					a:hover {
@@ -197,7 +269,7 @@ img {
 			}
 
 			li a {
-				color: #C5C5C5;
+				color: #dcdcdc;
 				text-shadow: none;
 				-webkit-text-shadow: none;
 				-moz-text-shadow: none;
@@ -331,8 +403,7 @@ img {
 }
 
 .blog-post {
-	border-top: 1px dotted #D5D5D5;
-	padding-top: 15px;
+	padding-top: 0px;
 
 	&.first {
 		border-top: none;
@@ -341,53 +412,70 @@ img {
 
 .container-fluid {
 
-	color: #787878;
-
-	h1 {
-		font-weight: normal;
-		color: #878787;
-	}
-
 	h6.author {
-		color: #C6C6C6;
-		font-weight: normal;
-		margin: -3px 0 0;
+		color: #B1B1B1;
+		font-weight: 300;
+		margin: 0 0 10px;
 		float: left;
 	}
 
-	h2.title {
-		margin: 0;
+	h1 {
 		font-weight: lighter;
+	}
+
+	h1.title, h2.title {
+		margin: 0;
 		font-size: 1.8em;
+		font-weight: lighter;
+		color: #898989;
 		a {
 			color: red;
 			font-weight: lighter;
+			text-decoration: none;
 		}
 	}
 
 	.content {
-		color: #787878;
 		display: block;
 		position: relative;
 		margin: 35px 0 0px;
 
-		p {
-			text-indent: 1em;
+		ul, ol {
+			margin: 1em 3em 1em 3em;
+		}
+
+		.fluid-width-video-wrapper {
+			iframe {
+				border: none;
+			}
 		}
 	}
 
-	.map-canvas {
-		width: 100% !important;
-		height: 175px !important;
-		border: 1px solid #DFDFDF;
-		margin: 0 0 10px 0;
+	.map {
+		&.leaderboard {
+			width: 100%;
+			height: 150px;
+			border: 1px solid #efefef;
+			margin: 0 0 10px 0;
+			img {
+				max-width: inherit;
+			}
+		}
+
+		&.large {
+			border: 1px solid #DFDFDF;
+			width: 100% !important;
+			height: 500px !important;
+			img {
+				max-width: inherit;
+			}
+		}
 	}
 
 	p.blog-list-detail {
 		text-align: right;
 		font-size: .9em;
 		font-weight: bold;
-		color: #D9D9D9;
 		padding: 0 3px;
 		margin: 5px 0 20px;
 		border-bottom: none;
@@ -400,15 +488,25 @@ img {
 		}
 	}
 
+	a.category {
+		color: #D1D1D1;
+		font-style: italic;
+		&:after {
+			content: ",";
+		}
+
+		&.last:after {
+			content: none;
+		}
+
+		&:hover {
+			color: #565656;
+			text-decoration: none;
+		}
+	}
+
 	.row-fluid .middle {
 		padding-left: 20px;
-
-		h1.title {
-			color: #565656;
-			font-weight: lighter;
-			font-size: 2em;
-			margin-bottom: 1px;
-		}
 
 		#comments {
 			font-size: .9em;
@@ -687,4 +785,30 @@ footer {
 			text-decoration: none;
 		}
 	}
+}
+
+// Related Posts
+
+#related-posts {
+	text-align: right;
+	margin: 15px 15px 35px 15px;
+
+	h3 {
+		font-weight: 300;
+		font-size: 1.2em;
+		margin: 0px;
+	}
+
+	ul {
+		margin-left: 15px;
+	}
+}
+
+
+// Justified Gallery CSS
+
+.jg-image-label {
+	padding: 3px 3px 3px 5px !important;
+	font-size: 0.8em !important;
+	font-family: inherit !important;
 }

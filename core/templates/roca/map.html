@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<script>
+$(document).ready(function() {
+
+	// Setup map options
+    var mapOptions = {
+      zoom: 10,
+      scrollwheel: false,
+      mapTypeControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    // Append mobile specific options
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) )
+        mapOptions['draggable'] = false; 
+    var map = new google.maps.Map(document.getElementById("map"),
+        mapOptions);
+
+    // For automatically fitting zoom level to all markers
+    var bounds = new google.maps.LatLngBounds();
+
+	{% for data in map_data %}
+		var latlng = new google.maps.LatLng({{ data.latitude | escapejs }} , {{ data.longitude | escapejs }});
+	    var marker = new google.maps.Marker({
+	        position: latlng,
+	        map: map,
+	    });
+	    bounds.extend(marker.getPosition());
+	{% endfor %}
+
+	map.fitBounds(bounds);
+});   
+</script>
+
+<div id="map" class="map large"></div>
+
+{% endblock %}

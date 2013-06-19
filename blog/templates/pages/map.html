@@ -1,0 +1,12 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags %}
+
+{% block main %}
+
+{% editable page.map.content %}
+{{ page.map.content|richtext_filter|safe }}
+{% endeditable %}
+{% include "blog/includes/map_large.html" %}
+{% endblock %}
+
