@@ -10,6 +10,8 @@ class MapPageMiddleware(object):
         """
         posts = []
 
+        page = page.get_content_model()
+
         if page.related_posts.count() or page.related_categories.count():
             rel_by_posts = page.related_posts.all()
             rel_by_cats = BlogPost.objects.filter(categories__in=page.related_categories.all())
