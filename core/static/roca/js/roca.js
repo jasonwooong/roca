@@ -81,7 +81,7 @@ function justifyGalleries() {
             var options = {
                 'captions': false,
                 'rowHeight': 150,
-                'margins': 0,
+                'margins': 1,
             };
             var gallery = $('td:first', this);
             gallery.wrap('<div class="container"></div>');
