@@ -7,6 +7,14 @@ Author: jason
 */
 
 @media(max-width: 767px) {
+	ul.pager {
+		li {
+			float: left;
+			display: block;
+			padding: 5px 5px 5px 0;
+		}
+	}
+
 	body {
 		padding-right:0;
 		padding-left:0;
