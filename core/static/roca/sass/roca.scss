@@ -13,29 +13,27 @@ Author: jason
 	}
 
 	h1, h2 {
-		padding: 0px 5px 0px 10px;
+		padding: 10px 5px 5px 10px;
+		&.title {
+			margin-bottom: 0px !important;
+			line-height: 1.2em;
+			font-size: 1.1em !important;
+			font-weight: bold !important;
+			& a {
+				font-weight: bold !important;
+			}
+		}
 		&.title.blog {
-			text-align: left;
-			font-size: 1.8em;
-			border-left: 10px solid;
-			border-top: 1px solid;
-			border-color: #e5e5e5;
+			border: none;
 		}
 	}
 
 	h6.author {
-		padding: 0px 0 10px 12px !important;
-		width: -moz-calc(100% - 22px);
-		    width: -webkit-calc(100% - 22px);
-		    width: calc(100% - 22px);
+		padding: 0px 0 10px 10px !important;
 		&.blog {
 			text-align: left;
 			padding: 2px 0 10px 12px;
-			border-left: 10px solid;
-			border-bottom: 1px solid;
-			border-color: #e5e5e5;
-			margin: 0px !important;
-			display: block !important;
+			border: none;
 		}
 	}
 
@@ -45,10 +43,6 @@ Author: jason
 
 	.blog-post {
 		border-top: none !important;
-
-		&.first {
-			margin-top: -21px;
-		}
 	}
 
 	.container-fluid {
@@ -415,8 +409,8 @@ img {
 	h6.author {
 		color: #B1B1B1;
 		font-weight: 300;
-		margin: 0 0 10px;
-		float: left;
+		margin: 0 0 5px;
+		width: 75%;
 	}
 
 	h1 {
@@ -427,7 +421,10 @@ img {
 		margin: 0;
 		font-size: 1.8em;
 		font-weight: lighter;
-		color: #898989;
+		color: #2A2A2A;
+		line-height: 1.2em;
+		width: 75%;
+		margin-bottom: 10px;
 		a {
 			color: red;
 			font-weight: lighter;
