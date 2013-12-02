@@ -109,9 +109,9 @@ $(document).ready(function () {
 </head>
 
 <body id="{% block body_id %}body{% endblock %}">
-
+<div class="header-title"><a target="_blank" href="{{ photo_header.href }}">{{ photo_header.title }}</a></div>
 <div id="header" class="image-header">
-    <a href="{{ photo_header.href }}"><img class="header" width="100%" src="{{ photo_header.img }}"/></a>
+    <img class="header" width="100%" src="{{ photo_header.img }}"/>
 </div>
 
 <div class="navbar navbar-fixed-top">

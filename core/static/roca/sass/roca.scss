@@ -395,6 +395,16 @@ img {
 	text-align: center;
 }
 
+.header-title a {
+	position: absolute;
+	right: 1px;
+	color: #FDFDFD;
+	padding: 10px 20px 10px 10px;
+	text-shadow: 1px 1px 0px #353535;
+	font-size: .85em;
+	text-decoration: none;
+}
+
 .comment-count {
 	float: left;
 	margin-left: 8px;
