@@ -86,7 +86,10 @@ class BlogPost(Displayable, Ownable, RichText, AdminThumbMixin):
             return self._keywords
 
     def reverse_geocode(self):
-        geodata = Geocoder.reverse_geocode(self.geo.latitude, self.geo.longitude)
+        try:
+            geodata = Geocoder.reverse_geocode(self.geo.latitude, self.geo.longitude)
+        except:
+            return "unknown location"
         return "%s, %s" % (geodata.locality, geodata.country)
 
 class BlogCategory(Slugged):
