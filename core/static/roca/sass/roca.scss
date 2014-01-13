@@ -96,6 +96,7 @@ Author: jason
 			}
 
 			.content {
+				display: inline-block;
 				margin-top: 0px;
 				ul {
 					margin: 10px 10px 10px 35px;
@@ -116,10 +117,8 @@ Author: jason
 		margin: 0px;
 	}
 
-	img {
-		&.featured-thumb {
-			margin: 5px 10px 0 10px !important;
-		}
+	.featured-thumb {
+		margin: 5px 10px 10px 10px !important;
 	}
 }
 
@@ -187,11 +186,12 @@ img {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+}
 
-	&.featured-thumb {
-		float: left;
-		margin: 10px 10px 0 0;
-	}
+.featured-thumb {
+	float: left;
+	margin: 0px 10px 0 0;
+	border-radius: 45px;
 }
 
 .navbar {
