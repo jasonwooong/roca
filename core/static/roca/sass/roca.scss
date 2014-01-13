@@ -842,3 +842,13 @@ footer {
 	font-size: 0.8em !important;
 	font-family: inherit !important;
 }
+
+// Mozilla fixes
+
+@-moz-document url-prefix() {
+	@media(max-width: 980px) {
+		.row-fluid {
+			float: left;
+		}
+	}
+}
