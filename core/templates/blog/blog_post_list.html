@@ -114,9 +114,11 @@
 {% endeditable %}
 {% endblock %}
 
+{% comment %}
 {% if blog_post.show_map %}
 {% include "blog/includes/map_leaderboard.html" %}
 {% endif %}
+{% endcomment %}
 
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
 {% block blog_post_list_post_featured_image %}
@@ -125,11 +127,13 @@
 {% endif %}
 
 <div class="content">
+<p>
 {% block blog_post_list_post_content %}
-{% editable blog_post.content %}
-{{ blog_post.content|safe }}
+{% editable blog_post.description %}
+{{ blog_post.description|safe }}
 {% endeditable %}
 {% endblock %}
+</p>
 </div>
 
 {% block blog_post_list_post_links %}
@@ -163,7 +167,7 @@
 {% endblock %}
 
 </div>
-
+<hr>
 {% endfor %}
 
 {% pagination_for blog_posts %}
