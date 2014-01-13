@@ -28,7 +28,7 @@ Author: jason
 			font-size: 1.1em !important;
 			font-weight: bold !important;
 			& a {
-				font-weight: bold !important;
+				//font-weight: bold !important;
 			}
 		}
 		&.title.blog {
@@ -38,6 +38,8 @@ Author: jason
 
 	h6.author {
 		padding: 0px 0 10px 10px !important;
+		line-height: 1.2em;
+		margin-top: 8px !important;
 		&.blog {
 			text-align: left;
 			padding: 2px 0 10px 12px;
@@ -96,7 +98,7 @@ Author: jason
 			}
 
 			.content {
-				display: inline-block;
+				//display: inline-block;
 				margin-top: 0px;
 				ul {
 					margin: 10px 10px 10px 35px;
@@ -118,7 +120,7 @@ Author: jason
 	}
 
 	.featured-thumb {
-		margin: 5px 10px 10px 10px !important;
+		margin: 5px 10px 5px 10px !important;
 	}
 }
 
@@ -135,6 +137,7 @@ Author: jason
 			width: 50%;
 		}
 	}
+
 }
 
 /*
@@ -190,8 +193,9 @@ img {
 
 .featured-thumb {
 	float: left;
-	margin: 0px 10px 0 0;
-	border-radius: 45px;
+	margin: 0px 15px 5px 0;
+	background-size: 96px 96px !important;
+	border-radius: 48px;
 }
 
 .navbar {
@@ -433,6 +437,7 @@ img {
 	padding-top: 0px;
 
 	&.first {
+		margin-top: 35px;
 		border-top: none;
 	}
 }
@@ -443,7 +448,7 @@ img {
 		color: #B1B1B1;
 		font-weight: 300;
 		margin: 0 0 5px;
-		width: 75%;
+		width: 95%;
 	}
 
 	h1 {
@@ -456,7 +461,7 @@ img {
 		font-weight: lighter;
 		color: #2A2A2A;
 		line-height: 1.2em;
-		width: 75%;
+		width: 95%;
 		margin-bottom: 10px;
 		a {
 			color: red;
