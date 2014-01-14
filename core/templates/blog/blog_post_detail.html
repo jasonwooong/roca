@@ -35,11 +35,6 @@
     {% if blog_post.show_location %}
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
     {% endif %}
-    {% if blog_post.category_list %}
-    {% for category in blog_post.category_list %}
-    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">— {{ category }}</a>
-    {% endfor %}
-    {% endif %}
 {% endeditable %}
 {% endblock %}
 </h6>
@@ -82,6 +77,14 @@
 {% endif %}
 {% endblock %}
 
+{% if blog_post.category_list %}
+    <span class="categories">
+    Posted in 
+    {% for category in blog_post.category_list %}
+    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">∙ {{ category }}</a>
+    {% endfor %}
+    </span>
+{% endif %} 
 {# {% rating_for blog_post %} #}
 
 {% comment %}

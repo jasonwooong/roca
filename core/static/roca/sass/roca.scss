@@ -442,6 +442,12 @@ img {
 	}
 }
 
+.categories, .unstyled.tags {
+	margin: 2px 10px 2px 20px;
+	clear: both;
+	font-size: .8em;
+}
+
 .container-fluid {
 
 	h6.author {
@@ -516,7 +522,7 @@ img {
 		border-bottom: none;
 
 		.categories {
-			display: block;
+			display: none;
 			clear: both;
 			font-style: normal;
 			margin: 0px 0 15px 0;
