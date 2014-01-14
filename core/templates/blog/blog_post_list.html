@@ -111,12 +111,6 @@
     {% if blog_post.show_location %}
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
     {% endif %}
-    {% if blog_post.category_list %}
-    &mdash;
-    {% for category in blog_post.category_list %}
-    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
-    {% endfor %}
-    {% endif %}
 </h6>
 {% endeditable %}
 {% endblock %}
@@ -138,6 +132,7 @@
 </div>
 
 {% block blog_post_list_post_links %}
+
 <p class="blog-list-detail">
     {% if blog_post.keyword_list %}
     {% trans "Tags" %}:
@@ -147,8 +142,17 @@
     {% endfor %}
     {% endspaceless %}
     <br>
+
     {% endif %}
-    <a href="{{ blog_post.get_absolute_url }}">{% trans "Read more →" %}</a>    
+    <a href="{{ blog_post.get_absolute_url }}">{% trans "Read more →" %}</a>
+    {% if blog_post.category_list %}
+    <span class="categories">
+    Posted in 
+    {% for category in blog_post.category_list %}
+    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">∙ {{ category }}</a>
+    {% endfor %}
+    </span>
+    {% endif %}    
     {% comment %}
     {# Uncomment to enable comments link #}
     /

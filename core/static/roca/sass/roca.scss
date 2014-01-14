@@ -514,6 +514,16 @@ img {
 		padding: 0 3px;
 		margin: 5px 20px 20px;
 		border-bottom: none;
+
+		.categories {
+			display: block;
+			clear: both;
+			font-style: normal;
+			margin: 15px 0 15px 0;
+			color: #B1B1B1;
+			font-size: .8em;
+		}
+
 		a {
 			color: #010101;
 			text-shadow: 0px -1px 0 #FFF;
@@ -528,11 +538,7 @@ img {
 	}
 
 	a.category {
-		color: #D1D1D1;
-		font-style: italic;
-		&:after {
-			content: ",";
-		}
+		color: red !important;
 
 		&.last:after {
 			content: none;
