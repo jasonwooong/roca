@@ -36,9 +36,8 @@
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
     {% endif %}
     {% if blog_post.category_list %}
-    &mdash;
     {% for category in blog_post.category_list %}
-    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
+    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">— {{ category }}</a>
     {% endfor %}
     {% endif %}
 {% endeditable %}
