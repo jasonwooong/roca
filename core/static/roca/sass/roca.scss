@@ -509,17 +509,21 @@ img {
 
 	p.blog-list-detail {
 		text-align: right;
-		font-size: .9em;
-		font-weight: bold;
+		font-size: 1em;
+		font-weight: lighter;
 		padding: 0 3px;
-		margin: 5px 0 20px;
+		margin: 5px 20px 20px;
 		border-bottom: none;
 		a {
-			color: #D2D2D2;
+			color: #010101;
 			text-shadow: 0px -1px 0 #FFF;
 			-webkit-text-shadow: 0px -1px 0 #FFF;
 			-moz-text-shadow: 0px -1px 0 #FFF;
 			-ms-text-shadow: 0px -1px 0 #FFF;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 
