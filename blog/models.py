@@ -90,7 +90,7 @@ class BlogPost(Displayable, Ownable, RichText, AdminThumbMixin):
             geodata = Geocoder.reverse_geocode(self.geo.latitude, self.geo.longitude)
         except:
             return "unknown location"
-        return "%s, %s" % (geodata.locality, geodata.country)
+        return "%s, %s" % (geodata.locality if geodata.locality else geodata.administrative_area_level_1, geodata.country)
 
 class BlogCategory(Slugged):
     """
