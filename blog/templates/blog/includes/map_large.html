@@ -46,7 +46,7 @@ $(document).ready(function() {
         position: new google.maps.LatLng({{ data.latitude | safe }} , {{ data.longitude | safe }}),
         map: map,
         title: "{{ data.title | safe }}",
-        description: "<p>{{ data.description | safe }}</p>",
+        description: "<p>{{ data.description | escapejs }}</p>",
         url: "{{ data.url }}"
       }));
         
