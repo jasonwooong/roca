@@ -102,7 +102,7 @@ Example HTML (TinyMCE Supported):
 ## Screenshots
 --------------
 
-[Click here](http://blog.jtwong.com) for a live sample of Roca in action.
+[Click here](http://roca.jtwong.com) for a live sample of Roca in action.
 
 *Responsive layout creates a collapsable menu bar when viewed on smaller
 devices.*

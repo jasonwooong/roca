@@ -66,12 +66,14 @@ function justifyGalleries() {
                     var src, filename, photo;
                     src = $this.attr('src');
 
-                    var flickr = /^http:\/\/.*staticflickr\.com/;
+                    var flickr = /^https?:\/\/.*staticflickr\.com/;
                     if(!flickr.test(src)) throw "Cannot justify gallery using " + src + ". Photo is not from valid Flickr source.";
 
                     filename = src.substr(src.lastIndexOf("/") + 1);
                     // Splice on first underbar to remove secret key, extension from photo id
                     photo = filename.substr(0, filename.indexOf("_"));
+                    if(!$this.attr('alt'))
+                        $this.attr('alt', $this.attr('title'));
                     $this.wrap('<a title="' + $this.attr('alt') + 
                         '" href="' + "http://flic.kr/p/" + base58.encode(parseInt(photo)) + 
                         "/lightbox" + '"></a>');

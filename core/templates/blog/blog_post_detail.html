@@ -35,12 +35,6 @@
     {% if blog_post.show_location %}
     {% blocktrans with location=blog_post.reverse_geocode %} in {{ location }} {% endblocktrans %}
     {% endif %}
-    {% if blog_post.category_list %}
-    &mdash;
-    {% for category in blog_post.category_list %}
-    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>
-    {% endfor %}
-    {% endif %}
 {% endeditable %}
 {% endblock %}
 </h6>
@@ -49,11 +43,13 @@
 {% include "blog/includes/map_leaderboard.html" %}
 {% endif %}
 
+{% comment %}
 {% block blog_post_detail_featured_image %}
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
 <p><img src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 600 0 %}"></p>
 {% endif %}
 {% endblock %}
+{% endcomment %}
 
 {% if settings.COMMENTS_DISQUS_SHORTNAME %}
 {% include "generic/includes/disqus_counts.html" %}
@@ -81,6 +77,14 @@
 {% endif %}
 {% endblock %}
 
+{% if blog_post.category_list %}
+    <span class="categories">
+    Posted in 
+    {% for category in blog_post.category_list %}
+    <a class="category {% if forloop.first %} first {% elif forloop.last %} last {% endif %}" href="{% url "blog_post_list_category" category.slug %}">∙ {{ category }}</a>
+    {% endfor %}
+    </span>
+{% endif %} 
 {# {% rating_for blog_post %} #}
 
 {% comment %}
